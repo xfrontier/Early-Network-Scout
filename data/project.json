@@ -1,0 +1,31 @@
+[
+  {
+    "id": "proj-x402-direct",
+    "name": "x402-direct",
+    "category": "x402 Infrastructure / Services",
+    "first_seen": "2026-09-16",
+    "official_url": "https://x402.direct",
+    "github_repo": "",
+    "weekly_snapshots": [
+      {
+        "week": "2026-W38",
+        "date": "2026-09-16",
+        "rank": 1,
+        "score": 5,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "基于 HTTP 402 协议的 Base 链微支付服务网关与资源检索目录",
+          "x402_fit": "⭐⭐⭐⭐⭐ (原生 402 协议示范站点)",
+          "highlights": [
+            "提供标准的 HTTP 402 Payment Required 响应机制",
+            "支持 Base 链 USDC 极小额 (如 $0.001) 即时微支付",
+            "开发者友好，原生适配去中心化 API 计费场景"
+          ],
+          "weekly_summary": "首个原生适配 x402 协议的微支付网关，成为 Base 链微支付生态的示范标杆。",
+          "card_markdown": "### 📌 x402-direct\n- **分类**: x402 Infrastructure / Services\n- **评分**: ⭐⭐⭐⭐⭐ (5/5)\n- **核心价值**: 基于 HTTP 402 协议的 Base 链微支付服务网关与资源检索目录\n- **x402 / 微支付契合度**: ⭐⭐⭐⭐⭐ (原生 402 协议示范站点)\n- **核心亮点**:\n  1. 提供标准的 HTTP 402 Payment Required 响应机制\n  2. 支持 Base 链 USDC 极小额 (如 $0.001) 即时微支付\n  3. 开发者友好，原生适配去中心化 API 计费场景"
+        }
+      }
+    ]
+  }
+]
