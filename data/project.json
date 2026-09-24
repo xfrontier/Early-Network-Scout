@@ -39,20 +39,542 @@
           "value_capture_analysis": {
             "summary": "Captures value across three core ecosystem entities by replacing recurring subscriptions with pay-per-use micro-settlements.",
             "entities": [
-              "API Service Providers: Instant USDC settlement per call with zero chargeback risk and reduced subscription churn.",
+              "API Service Providers: Instant USDC settlement per call with zero chargeback risk.",
               "AI Agent Operators: Frictionless micro-payments enable fully autonomous Machine-to-Machine (M2M) service consumption.",
-              "Base L2 Network & Relayers: Protocol fee capture on micro-transactions, driving Base L2 sequence revenue and liquidity routing."
+              "Base L2 Network & Relayers: Protocol fee capture on micro-transactions, driving Base L2 sequence revenue."
             ]
           },
           "actionable_path_for_individuals": {
             "summary": "Three clear pathways for individual participants and developers to monetize and build within the x402 ecosystem.",
             "paths": [
               "Developer Path: Wrap legacy REST APIs with x402 headers to enable instant pay-per-use monetization.",
-              "Operator Path: Deploy autonomous AI agents to offer specialized on-chain micro-services (e.g., data scraping, compute).",
-              "Participant Path: Provide liquidity micro-routing nodes or participate in facilitator staking to share protocol fee dividends."
+              "Operator Path: Deploy autonomous AI agents to offer specialized on-chain micro-services.",
+              "Participant Path: Provide liquidity micro-routing nodes or participate in facilitator staking."
             ]
           },
           "card_markdown": "### 📌 x402 Payment Rails\n- **Category**: x402 Infrastructure / Micropayments\n- **Score**: 86 / 100\n- **Core Value**: Zero-friction micropayment infrastructure leveraging HTTP 402 status codes for Autonomous AI Agents on Base network.\n- **Key Evaluation Dimensions**:\n  1. **Developer & Code Ecosystem**: 1,240 Stars | 185 Forks | 42 Commits (30d) — Native HTTP 402 adoption with lightweight SDK for permissionless AI Agent API metering.\n  2. **On-Chain & Network Dynamics**: 142.5K Txs (7d) | 8.9K Active Addrs | $18.45K Vol — Ultra-low Base L2 Gas ($0.00008 avg) supporting $0.001 high-frequency micropayments.\n  3. **Value Capture Analysis**: Value distributed across **API Providers** (pay-per-call USDC), **AI Agents** (autonomous M2M billing), and **L2 Relayers** (micro-routing protocol fees).\n  4. **Actionable Path for Individuals**: **Developers** wrap REST APIs for instant monetization; **Operators** run service agents; **Participants** run micro-routing nodes for yield."
+        }
+      }
+    ]
+  },
+  {
+    "id": "proj-base-agent-sdk",
+    "name": "Base Agent SDK",
+    "category": "AI Agent Infrastructure",
+    "first_seen": "2026-09-16",
+    "official_url": "",
+    "github_repo": "",
+    "weekly_snapshots": [
+      {
+        "week": "2026-W38",
+        "date": "2026-09-16",
+        "rank": 2,
+        "score": 84,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Developer toolkit enabling AI Agents to create wallets, sign transactions, and interact with smart contracts natively on Base.",
+          "developer_code_ecosystem": {
+            "summary": "High developer activity with modular Python and TypeScript packages tailored for Agentic workflows.",
+            "metrics": {
+              "github_stars": 980,
+              "github_forks": 142,
+              "commits_30d": 38,
+              "active_contributors": 9,
+              "sdk_downloads_weekly": 2900
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Powers significant agent-initiated wallet creations and contract calls across Base protocols.",
+            "metrics": {
+              "tx_count_7d": 98000,
+              "active_addresses_7d": 6200,
+              "volume_usd_7d": 12300.00,
+              "avg_gas_usd": 0.00009,
+              "tps_peak": 30
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Monetizes through premium SDK modules, custom RPC routing, and enterprise agent integrations.",
+            "entities": [
+              "SDK Core Developers: Monetize via enterprise plugins and priority RPC endpoints.",
+              "Agent Builders: Reduce development overhead for wallet management and chain interaction.",
+              "Base Ecosystem: Drives transaction volume and developer retention."
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Opportunities for builders to create customized agent plugins or host dedicated RPC infrastructure.",
+            "paths": [
+              "Developer Path: Build custom plugins for specialized DEX or DeFi protocols using the SDK.",
+              "Operator Path: Run automated trading or arbitrage agents deployed via the toolkit.",
+              "Participant Path: Stake tokens to support decentralized RPC access for agents."
+            ]
+          },
+          "card_markdown": "### 📌 Base Agent SDK\n- **Category**: AI Agent Infrastructure\n- **Score**: 84 / 100\n- **Core Value**: Developer toolkit enabling AI Agents to create wallets, sign transactions, and interact with smart contracts natively on Base.\n- **Key Evaluation Dimensions**:\n  1. **Developer & Code Ecosystem**: 980 Stars | 142 Forks | 38 Commits (30d) — High developer adoption for Python/TS agent frameworks.\n  2. **On-Chain & Network Dynamics**: 98K Txs (7d) | 6.2K Active Addrs | $12.3K Vol — Drives steady agent wallet deployments on Base L2.\n  3. **Value Capture Analysis**: Value captured via premium RPC routing, enterprise agent plugins, and developer tool licensing.\n  4. **Actionable Path for Individuals**: **Developers** build custom chain-interaction plugins; **Operators** run autonomous yield/arbitrage agents."
+        }
+      }
+    ]
+  },
+  {
+    "id": "proj-usdc-micro-router",
+    "name": "USDC Micro Router",
+    "category": "DeFi / Liquidity Routing",
+    "first_seen": "2026-09-16",
+    "official_url": "",
+    "github_repo": "",
+    "weekly_snapshots": [
+      {
+        "week": "2026-W38",
+        "date": "2026-09-16",
+        "rank": 3,
+        "score": 82,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Optimized liquidity routing engine designed for sub-cent USDC transfers with minimal slippage and gas overhead.",
+          "developer_code_ecosystem": {
+            "summary": "Efficient smart contract codebase with audited micro-batching algorithms.",
+            "metrics": {
+              "github_stars": 650,
+              "github_forks": 95,
+              "commits_30d": 24,
+              "active_contributors": 6,
+              "sdk_downloads_weekly": 1500
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "High volume of micro-settlements batched dynamically to minimize Base L2 execution costs.",
+            "metrics": {
+              "tx_count_7d": 115000,
+              "active_addresses_7d": 7400,
+              "volume_usd_7d": 24500.00,
+              "avg_gas_usd": 0.00005,
+              "tps_peak": 50
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Captures a fractional protocol fee (e.g., 0.01%) per routed micro-transaction.",
+            "entities": [
+              "Liquidity Providers: Earn micro-yields on pooled USDC liquidity.",
+              "Routing Relayers: Capture gas optimization arbitrage and batch fees.",
+              "Micro-Merchants: Benefit from lower per-transaction overhead."
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Liquidity provision and router node operation for passive micro-yields.",
+            "paths": [
+              "Developer Path: Integrate routing smart contracts into dApps requiring micro-payments.",
+              "Operator Path: Run automated batching relayers to collect execution rewards.",
+              "Participant Path: Deposit USDC into micro-liquidity pools to earn routing fee share."
+            ]
+          },
+          "card_markdown": "### 📌 USDC Micro Router\n- **Category**: DeFi / Liquidity Routing\n- **Score**: 82 / 100\n- **Core Value**: Optimized liquidity routing engine designed for sub-cent USDC transfers with minimal slippage and gas overhead.\n- **Key Evaluation Dimensions**:\n  1. **Developer & Code Ecosystem**: 650 Stars | 95 Forks | 24 Commits (30d) — Audited contract suite focused on transaction batching.\n  2. **On-Chain & Network Dynamics**: 115K Txs (7d) | 7.4K Active Addrs | $24.5K Vol — Industry-leading gas efficiency ($0.00005 avg).\n  3. **Value Capture Analysis**: Fractional routing fee model capturing continuous yield from micro-settlement velocity.\n  4. **Actionable Path for Individuals**: **LPs** deposit USDC into routing pools; **Operators** run batch relayers for execution fees."
+        }
+      }
+    ]
+  },
+  {
+    "id": "proj-paywall-protocol",
+    "name": "Paywall Protocol",
+    "category": "Developer Tools / Content Monetization",
+    "first_seen": "2026-09-16",
+    "official_url": "",
+    "github_repo": "",
+    "weekly_snapshots": [
+      {
+        "week": "2026-W38",
+        "date": "2026-09-16",
+        "rank": 4,
+        "score": 79,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Plug-and-play web component allowing creators to monetize articles, APIs, and digital media per view or click using x402.",
+          "developer_code_ecosystem": {
+            "summary": "Easy-to-use React/Vue components and WordPress plugins for rapid site integration.",
+            "metrics": {
+              "github_stars": 510,
+              "github_forks": 78,
+              "commits_30d": 19,
+              "active_contributors": 5,
+              "sdk_downloads_weekly": 1200
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Growing usage across Web3 media sites and independent developer blogs on Base.",
+            "metrics": {
+              "tx_count_7d": 42000,
+              "active_addresses_7d": 3800,
+              "volume_usd_7d": 4100.00,
+              "avg_gas_usd": 0.00008,
+              "tps_peak": 15
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Takes a minor percentage cut (1-2%) on total unlock volume across registered sites.",
+            "entities": [
+              "Content Creators: Instant pay-per-read revenues directly to web3 wallets.",
+              "Readers: No login or monthly subscription required; pay pennies for specific content.",
+              "Protocol Treasury: Accumulates protocol fee share on every unlock."
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Content creators and site owners can monetize existing digital assets immediately.",
+            "paths": [
+              "Developer Path: Build cms plugins or themes with built-in paywall components.",
+              "Creator Path: Embed micro-paywalls on blogs, premium newsletter links, or research articles.",
+              "Participant Path: Refer new creators to earn a commission on unlock fees."
+            ]
+          },
+          "card_markdown": "### 📌 Paywall Protocol\n- **Category**: Developer Tools / Content Monetization\n- **Score**: 79 / 100\n- **Core Value**: Plug-and-play web component allowing creators to monetize articles, APIs, and digital media per view using x402.\n- **Key Evaluation Dimensions**:\n  1. **Developer & Code Ecosystem**: 510 Stars | 78 Forks | 19 Commits (30d) — Pre-built React/Vue/WordPress SDKs for instant paywall integration.\n  2. **On-Chain & Network Dynamics**: 42K Txs (7d) | 3.8K Active Addrs | $4.1K Vol — Steady growth across independent crypto blogs.\n  3. **Value Capture Analysis**: 1-2% protocol cut on content unlocks, replacing ad networks with direct pay-per-view income.\n  4. **Actionable Path for Individuals**: **Creators** lock premium posts/media; **Developers** build specialized CMS monetization plugins."
+        }
+      }
+    ]
+  },
+  {
+    "id": "proj-agentic-data-market",
+    "name": "Agentic Data Market",
+    "category": "AI Data Marketplace",
+    "first_seen": "2026-09-16",
+    "official_url": "",
+    "github_repo": "",
+    "weekly_snapshots": [
+      {
+        "week": "2026-W38",
+        "date": "2026-09-16",
+        "rank": 5,
+        "score": 77,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Decentralized marketplace where AI agents buy and sell real-time web scraping, market feeds, and sensor data using micro-transactions.",
+          "developer_code_ecosystem": {
+            "summary": "Standardized data schemas and API endpoints for agent-to-agent data trading.",
+            "metrics": {
+              "github_stars": 430,
+              "github_forks": 62,
+              "commits_30d": 16,
+              "active_contributors": 4,
+              "sdk_downloads_weekly": 850
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Steady stream of automated data purchase transactions triggered by LLM agents.",
+            "metrics": {
+              "tx_count_7d": 35000,
+              "active_addresses_7d": 2100,
+              "volume_usd_7d": 5600.00,
+              "avg_gas_usd": 0.00008,
+              "tps_peak": 12
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Marketplace fee charged on every completed data query or dataset purchase.",
+            "entities": [
+              "Data Scrapers/Nodes: Monetize niche data pipelines via micro-query fees.",
+              "AI Consumer Agents: Purchase real-time verified context on demand without bulk dataset costs.",
+              "Platform Registry: Curates high-reputation data providers via staking."
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Run data provider bots or curate data streams for active AI agents.",
+            "paths": [
+              "Developer Path: Build specialized data scrapers (e.g., weather, social sentiment) and register them on market.",
+              "Operator Path: Deploy data verification nodes to validate agent query outputs.",
+              "Participant Path: Stake on high-reputation data providers to receive revenue share."
+            ]
+          },
+          "card_markdown": "### 📌 Agentic Data Market\n- **Category**: AI Data Marketplace\n- **Score**: 77 / 100\n- **Core Value**: Decentralized marketplace where AI agents buy and sell real-time web scraping and market data via micro-transactions.\n- **Key Evaluation Dimensions**:\n  1. **Developer & Code Ecosystem**: 430 Stars | 62 Forks | 16 Commits (30d) — Standardized agent query schemas and API contracts.\n  2. **On-Chain & Network Dynamics**: 35K Txs (7d) | 2.1K Active Addrs | $5.6K Vol — High M2M transaction frequency for real-time context.\n  3. **Value Capture Analysis**: Query-level marketplace commission model driving revenue directly to data node operators.\n  4. **Actionable Path for Individuals**: **Developers** build and list niche data scrapers; **Participants** stake on top data providers."
+        }
+      }
+    ]
+  },
+  {
+    "id": "proj-coinbase-wallet-m2m",
+    "name": "Coinbase Wallet M2M",
+    "category": "Wallet / M2M Settlement",
+    "first_seen": "2026-09-16",
+    "official_url": "",
+    "github_repo": "",
+    "weekly_snapshots": [
+      {
+        "week": "2026-W38",
+        "date": "2026-09-16",
+        "rank": 6,
+        "score": 75,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Smart wallet extension enabling automated Machine-to-Machine payment execution with customizable spending caps.",
+          "developer_code_ecosystem": {
+            "summary": "Integrates directly with Coinbase Developer Platform (CDP) SDKs and Passkey infrastructure.",
+            "metrics": {
+              "github_stars": 390,
+              "github_forks": 54,
+              "commits_30d": 14,
+              "active_contributors": 4,
+              "sdk_downloads_weekly": 920
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Leverages ERC-4337 session keys for low-friction automated transactions.",
+            "metrics": {
+              "tx_count_7d": 28000,
+              "active_addresses_7d": 1900,
+              "volume_usd_7d": 3200.00,
+              "avg_gas_usd": 0.00010,
+              "tps_peak": 10
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Captures value via sponsored transaction batching and wallet service tiering.",
+            "entities": [
+              "End Users: Set predefined budgets for autonomous AI agents without risking entire wallet balances.",
+              "Base Network: Expands smart contract account adoption and daily active wallets.",
+              "Wallet Infrastructure: Captures relay and gas-sponsorship margins."
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Users can set up agent wallets with controlled allowances to automate personal Web3 tasks.",
+            "paths": [
+              "Developer Path: Integrate session-key wallet components into agent applications.",
+              "User Path: Fund agent session wallets with daily limits for automated tasks (e.g., automated yield compound).",
+              "Participant Path: Test and provide feedback on new Passkey and CDP features."
+            ]
+          },
+          "card_markdown": "### 📌 Coinbase Wallet M2M\n- **Category**: Wallet / M2M Settlement\n- **Score**: 75 / 100\n- **Core Value**: Smart wallet extension enabling automated Machine-to-Machine payment execution with customizable spending caps.\n- **Key Evaluation Dimensions**:\n  1. **Developer & Code Ecosystem**: 390 Stars | 54 Forks | 14 Commits (30d) — Native compatibility with CDP SDKs and Passkeys.\n  2. **On-Chain & Network Dynamics**: 28K Txs (7d) | 1.9K Active Addrs | $3.2K Vol — ERC-4337 session key usage for bounded autonomy.\n  3. **Value Capture Analysis**: Monetized through enterprise relayer services and gas-sponsorship batching infrastructure.\n  4. **Actionable Path for Individuals**: **Users** deploy bounded agent wallets for automated tasks; **Developers** integrate session keys."
+        }
+      }
+    ]
+  },
+  {
+    "id": "proj-farcaster-frame-402",
+    "name": "Farcaster Frame 402",
+    "category": "SocialFi / Mini-Apps",
+    "first_seen": "2026-09-16",
+    "official_url": "",
+    "github_repo": "",
+    "weekly_snapshots": [
+      {
+        "week": "2026-W38",
+        "date": "2026-09-16",
+        "rank": 7,
+        "score": 73,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Framework for embedding instant 1-click x402 micro-payment actions inside Farcaster Frames and social feeds.",
+          "developer_code_ecosystem": {
+            "summary": "Lightweight Frame SDK extension allowing social creators to charge for digital downloads or tipping.",
+            "metrics": {
+              "github_stars": 310,
+              "github_forks": 45,
+              "commits_30d": 12,
+              "active_contributors": 3,
+              "sdk_downloads_weekly": 600
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "High viral engagement in Farcaster feed casts with embedded payment frames.",
+            "metrics": {
+              "tx_count_7d": 19500,
+              "active_addresses_7d": 2400,
+              "volume_usd_7d": 1800.00,
+              "avg_gas_usd": 0.00007,
+              "tps_peak": 8
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Micro-commission fee on Frame-triggered payments and NFT mints.",
+            "entities": [
+              "Farcaster Creators: Monetize casts, memes, and digital art with sub-$0.10 micro-tips.",
+              "Social Users: One-click tipping directly from Warpcast feed without switching apps.",
+              "Frame Developers: Share in frame transaction fees."
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Social media creators and developers can launch viral paid frames in minutes.",
+            "paths": [
+              "Developer Path: Build novel interactive frames (e.g., mini-games, polling) with x402 paywalls.",
+              "Creator Path: Publish paid casts or micro-digital collectibles on Farcaster.",
+              "Participant Path: Engage in cast-to-earn micro-tipping campaigns."
+            ]
+          },
+          "card_markdown": "### 📌 Farcaster Frame 402\n- **Category**: SocialFi / Mini-Apps\n- **Score**: 73 / 100\n- **Core Value**: Framework for embedding instant 1-click x402 micro-payment actions inside Farcaster Frames and social feeds.\n- **Key Evaluation Dimensions**:\n  1. **Developer & Code Ecosystem**: 310 Stars | 45 Forks | 12 Commits (30d) — Frame v2 compatible SDK for social feeds.\n  2. **On-Chain & Network Dynamics**: 19.5K Txs (7d) | 2.4K Active Addrs | $1.8K Vol — Driven by viral Warpcast tipping trends.\n  3. **Value Capture Analysis**: Fee-split on micro-tips, Frame mints, and social paywall triggers.\n  4. **Actionable Path for Individuals**: **Creators** publish paid casts/polls; **Developers** build interactive monetization frames."
+        }
+      }
+    ]
+  },
+  {
+    "id": "proj-auto-compute-node",
+    "name": "Auto Compute Node",
+    "category": "DePIN / Distributed Compute",
+    "first_seen": "2026-09-16",
+    "official_url": "",
+    "github_repo": "",
+    "weekly_snapshots": [
+      {
+        "week": "2026-W38",
+        "date": "2026-09-16",
+        "rank": 8,
+        "score": 70,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Lightweight node client allowing GPU/CPU owners to rent compute cycles to AI Agents with instant per-second x402 payouts.",
+          "developer_code_ecosystem": {
+            "summary": "Dockerized node client with open RPC protocols for task scheduling.",
+            "metrics": {
+              "github_stars": 280,
+              "github_forks": 38,
+              "commits_30d": 11,
+              "active_contributors": 3,
+              "sdk_downloads_weekly": 450
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Frequent micro-payout transactions streamed continuously to compute providers.",
+            "metrics": {
+              "tx_count_7d": 15000,
+              "active_addresses_7d": 850,
+              "volume_usd_7d": 2900.00,
+              "avg_gas_usd": 0.00008,
+              "tps_peak": 6
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Protocol cut on compute lease settlement fees.",
+            "entities": [
+              "Compute Providers: Earn continuous USDC micro-yield for idle hardware cycles.",
+              "AI Developers: Rent targeted GPU inference capacity without long-term cloud contracts.",
+              "Node Network: Orchestrates task distribution and proof-of-compute verification."
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Hardware owners can run node clients to monetize spare GPU or CPU resources.",
+            "paths": [
+              "Developer Path: Build workload dispatchers for custom AI models.",
+              "Hardware Operator Path: Run Docker node client on idle Mac or PC GPU to earn continuous USDC.",
+              "Participant Path: Benchmark and verify compute node performance."
+            ]
+          },
+          "card_markdown": "### 📌 Auto Compute Node\n- **Category**: DePIN / Distributed Compute\n- **Score**: 70 / 100\n- **Core Value**: Node client allowing GPU/CPU owners to rent compute cycles to AI Agents with per-second x402 payouts.\n- **Key Evaluation Dimensions**:\n  1. **Developer & Code Ecosystem**: 280 Stars | 38 Forks | 11 Commits (30d) — Open Docker container for compute scheduling.\n  2. **On-Chain & Network Dynamics**: 15K Txs (7d) | 850 Active Addrs | $2.9K Vol — Continuous streaming micro-payouts.\n  3. **Value Capture Analysis**: Per-second compute settlement protocol fee captured on Base L2.\n  4. **Actionable Path for Individuals**: **Hardware Owners** run background nodes on Mac/PC; **Developers** rent cheap AI inference."
+        }
+      }
+    ]
+  },
+  {
+    "id": "proj-micro-stream-yield",
+    "name": "Micro Stream Yield",
+    "category": "DeFi / Yield Aggregator",
+    "first_seen": "2026-09-16",
+    "official_url": "",
+    "github_repo": "",
+    "weekly_snapshots": [
+      {
+        "week": "2026-W38",
+        "date": "2026-09-16",
+        "rank": 9,
+        "score": 68,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Automated vault protocol that aggregates micro-payments and instantly streams reinvested yields back to depositors.",
+          "developer_code_ecosystem": {
+            "summary": "Solidity smart contracts implementing real-time yield streaming logic.",
+            "metrics": {
+              "github_stars": 210,
+              "github_forks": 29,
+              "commits_30d": 8,
+              "active_contributors": 2,
+              "sdk_downloads_weekly": 310
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "High compound frequency made viable by Base L2 low gas costs.",
+            "metrics": {
+              "tx_count_7d": 11000,
+              "active_addresses_7d": 620,
+              "volume_usd_7d": 5100.00,
+              "avg_gas_usd": 0.00009,
+              "tps_peak": 5
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Performance fee taken on auto-compounded yield streams.",
+            "entities": [
+              "Vault Depositors: Realize real-time compounded APY on small USDC balances.",
+              "Base L2 DeFi Protocols: Increased sticky TVL and liquidity stability.",
+              "Vault Keepers: Collect execution bounties for triggering compounding bots."
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Deposit small stablecoin balances or run compound keeper bots.",
+            "paths": [
+              "Developer Path: Design automated vault strategies for emerging Base DeFi pools.",
+              "Operator Path: Run keeper bots to auto-trigger yield compound cycles for rewards.",
+              "Participant Path: Deposit USDC into streaming yield vaults for automated compounding."
+            ]
+          },
+          "card_markdown": "### 📌 Micro Stream Yield\n- **Category**: DeFi / Yield Aggregator\n- **Score**: 68 / 100\n- **Core Value**: Vault protocol that aggregates micro-payments and instantly streams reinvested yields back to depositors.\n- **Key Evaluation Dimensions**:\n  1. **Developer & Code Ecosystem**: 210 Stars | 29 Forks | 8 Commits (30d) — Real-time streaming vault smart contracts.\n  2. **On-Chain & Network Dynamics**: 11K Txs (7d) | 620 Active Addrs | $5.1K Vol — High-frequency compounding enabled by low L2 gas.\n  3. **Value Capture Analysis**: Vault performance fee model auto-captured during streaming yield distribution.\n  4. **Actionable Path for Individuals**: **Depositors** earn real-time streaming APY; **Operators** run compound keeper bots."
+        }
+      }
+    ]
+  },
+  {
+    "id": "proj-chainlink-402-oracle",
+    "name": "Chainlink 402 Oracle",
+    "category": "Oracle / Data Feeds",
+    "first_seen": "2026-09-16",
+    "official_url": "",
+    "github_repo": "",
+    "weekly_snapshots": [
+      {
+        "week": "2026-W38",
+        "date": "2026-09-16",
+        "rank": 10,
+        "score": 65,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Oracle adapter allowing smart contracts to trigger HTTP 402 payments for off-chain API data verification.",
+          "developer_code_ecosystem": {
+            "summary": "Chainlink Functions integration enabling secure x402 header validation.",
+            "metrics": {
+              "github_stars": 190,
+              "github_forks": 22,
+              "commits_30d": 6,
+              "active_contributors": 2,
+              "sdk_downloads_weekly": 200
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Verifiable oracle requests requesting paid off-chain web endpoints.",
+            "metrics": {
+              "tx_count_7d": 8500,
+              "active_addresses_7d": 410,
+              "volume_usd_7d": 1200.00,
+              "avg_gas_usd": 0.00012,
+              "tps_peak": 4
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Oracle query fee split between node operators and data verification pools.",
+            "entities": [
+              "Smart Contract Developers: Fetch verified paid web API data directly on-chain.",
+              "Oracle Nodes: Earn node rewards for relaying and attesting x402 payment proofs.",
+              "Off-Chain API Providers: Monetize data directly to smart contracts without middleman custom bridges."
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Integrate oracle feeds into dApps or operate data attestation nodes.",
+            "paths": [
+              "Developer Path: Use Oracle adapter to consume premium paywalled web APIs inside smart contracts.",
+              "Node Operator Path: Run Chainlink Functions nodes supporting x402 response parsing.",
+              "Participant Path: Stake LINK/Base tokens on oracle attestation security."
+            ]
+          },
+          "card_markdown": "### 📌 Chainlink 402 Oracle\n- **Category**: Oracle / Data Feeds\n- **Score**: 65 / 100\n- **Core Value**: Oracle adapter allowing smart contracts to trigger HTTP 402 payments for off-chain API data verification.\n- **Key Evaluation Dimensions**:\n  1. **Developer & Code Ecosystem**: 190 Stars | 22 Forks | 6 Commits (30d) — Chainlink Functions integration adapter.\n  2. **On-Chain & Network Dynamics**: 8.5K Txs (7d) | 410 Active Addrs | $1.2K Vol — Oracle request verification volume on Base L2.\n  3. **Value Capture Analysis**: Oracle query fee model capturing revenue for off-chain API data attestation.\n  4. **Actionable Path for Individuals**: **Developers** pull paywalled web data into contracts; **Node Operators** run oracle bridges."
         }
       }
     ]
