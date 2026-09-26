@@ -8,7 +8,7 @@ from google.genai import types
 
 # 1. 基础路径配置
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-JSON_PATH = os.path.join(BASE_DIR, "data", "projects.json")
+JSON_PATH = os.path.join(BASE_DIR, "data", "project.json")
 README_PATH = os.path.join(BASE_DIR, "README.md")
 REPORTS_DIR = os.path.join(BASE_DIR, "reports")
 
@@ -332,7 +332,7 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 
 - **Last Updated**: `{current_date_str}`
 - **Active Cycle**: `{current_week_str}`
-- **Database Backend**: [`data/projects.json`](data/projects.json)
+- **Database Backend**: [`data/project.json`](data/project.json)
 
 ---
 
