@@ -109,13 +109,13 @@ def save_database(data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_str):
-    """利用 Gemini API + Google Search Grounding 抓取并评估最新 Top 10 项目（兼顾安全提取）"""
+    """利用 Gemini Chat API + Google Search Grounding 抓取并评估最新 Top 10 项目（解决 SDK AFC Bug）"""
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("⚠️ GEMINI_API_KEY missing. Skipping live AI scouting.")
         return None
 
-    print("🔑 GEMINI_API_KEY detected. Initializing Gemini Client with Search Grounding...")
+    print("🔑 GEMINI_API_KEY detected. Initializing Gemini Client with Search Grounding via Chat...")
     client = genai.Client(api_key=api_key)
     
     # 仅保留最近 10 个项目的必要信息，节省 Input Tokens
@@ -133,30 +133,30 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
     max_retries = 3
     for attempt in range(1, max_retries + 1):
         try:
-            response = client.models.generate_content(
+            # 使用官方推荐的 chats 接口，完美支持 google_search 工具调用
+            chat = client.chats.create(
                 model="gemini-3.8-flash",
-                contents=prompt,
                 config=types.GenerateContentConfig(
                     tools=[{"google_search": {}}],
                     response_mime_type="application/json"
                 )
             )
-            
-            # 安全提取返回文本，防止 response.text 为 None 导致崩溃
+            response = chat.send_message(prompt)
+
             raw_text = None
             if hasattr(response, 'text') and response.text:
                 raw_text = response.text.strip()
             elif hasattr(response, 'candidates') and response.candidates:
-                # 兜底：直接从 candidates 里面拼接 text 内容
+                # 兜底方案：从 candidates 的 text part 提取
                 parts = response.candidates[0].content.parts
                 text_parts = [p.text for p in parts if hasattr(p, 'text') and p.text]
                 if text_parts:
                     raw_text = "".join(text_parts).strip()
 
             if not raw_text:
-                raise ValueError("Received empty or None response text from Gemini API")
+                raise ValueError("Received empty or None response text from Gemini Chat API")
 
-            # 清理 Markdown 代码块包裹标记
+            # 清理 Markdown 代码块格式
             if raw_text.startswith("```"):
                 raw_text = re.sub(r'^```[a-zA-Z]*\n', '', raw_text)
                 raw_text = re.sub(r'\n```$', '', raw_text)
