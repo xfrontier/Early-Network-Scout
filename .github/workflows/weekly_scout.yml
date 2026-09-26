@@ -43,5 +43,5 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/projects.json README.md reports/
+          git add -A
           git diff-index --quiet HEAD || (git commit -m "chore: automated weekly ecosystem scout update" && git push)
