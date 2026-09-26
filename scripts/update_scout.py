@@ -109,54 +109,116 @@ def save_database(data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_str):
-    """利用 Gemini Chat API + Google Search Grounding 抓取并评估最新 Top 10 项目（解决 SDK AFC Bug）"""
+    """采用‘联网检索 + JSON 结构化’两步法，彻底解决 SDK 联网与 JSON 强制格式冲突的 Bug"""
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("⚠️ GEMINI_API_KEY missing. Skipping live AI scouting.")
         return None
 
-    print("🔑 GEMINI_API_KEY detected. Initializing Gemini Client with Search Grounding via Chat...")
+    print("🔑 GEMINI_API_KEY detected. Initializing Two-Step Search Grounding...")
     client = genai.Client(api_key=api_key)
     
-    # 仅保留最近 10 个项目的必要信息，节省 Input Tokens
     existing_context = [
         {"id": p["id"], "name": p["name"]}
         for p in existing_db[-10:]
     ]
 
-    prompt = PROMPT_TEMPLATE.format(
-        current_week_str=current_week_str,
-        current_date_str=current_date_str,
-        existing_projects_context=json.dumps(existing_context, ensure_ascii=False)
-    )
+    # --- 第一步：开启联网搜索，搜集当周最新项目信息（纯文本输出） ---
+    search_prompt = f"""
+Search the web for the top 10 promising early-stage blockchain/Web3 projects for the current week ({current_week_str}).
+Find project names, core value proposition, developer ecosystem stats (GitHub), on-chain metrics, value capture, and actionable pathways.
+Existing projects to keep IDs consistent if matched:
+{json.dumps(existing_context, ensure_ascii=False)}
+"""
 
     max_retries = 3
     for attempt in range(1, max_retries + 1):
         try:
-            # 使用官方推荐的 chats 接口，完美支持 google_search 工具调用
-            chat = client.chats.create(
+            print("🌐 Step 1: Performing live Google Search grounding...")
+            step1_response = client.models.generate_content(
                 model="gemini-3.8-flash",
+                contents=search_prompt,
                 config=types.GenerateContentConfig(
-                    tools=[{"google_search": {}}],
+                    tools=[{"google_search": {}}] # 仅开启联网，不加 application/json 约束
+                )
+            )
+
+            search_fact_text = getattr(step1_response, 'text', '')
+            if not search_fact_text and hasattr(step1_response, 'candidates') and step1_response.candidates:
+                parts = step1_response.candidates[0].content.parts
+                search_fact_text = "".join([p.text for p in parts if hasattr(p, 'text') and p.text])
+
+            if not search_fact_text:
+                raise ValueError("Step 1 failed to retrieve live search text.")
+
+            # --- 第二步：将搜到的最新事实转为严格的 JSON 数据 ---
+            print("🧩 Step 2: Formatting search results into structured JSON...")
+            step2_prompt = f"""
+Based on the following live search results:
+---
+{search_fact_text}
+---
+
+Transform the information into a strictly valid JSON list of 10 project objects adhering to this schema:
+[
+  {{
+    "id": "proj-unique-slug",
+    "name": "Project Name",
+    "category": "L2 / AI x Crypto / DeFi / DePIN / RWA",
+    "first_seen": "{current_date_str}",
+    "official_url": "https://...",
+    "github_repo": "https://...",
+    "weekly_snapshots": [
+      {{
+        "week": "{current_week_str}",
+        "date": "{current_date_str}",
+        "rank": 1,
+        "score": 88,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {{
+          "core_value": "Short core value proposition sentence.",
+          "developer_code_ecosystem": {{
+            "summary": "Brief summary",
+            "metrics": {{
+              "github_stars": 1200,
+              "github_forks": 150,
+              "commits_30d": 30,
+              "active_contributors": 10
+            }}
+          }},
+          "onchain_network_dynamics": {{
+            "summary": "Brief summary",
+            "metrics": {{
+              "tx_count_7d": 50000,
+              "active_addresses_7d": 3000,
+              "volume_usd_7d": 10000.0,
+              "avg_gas_usd": 0.0001
+            }}
+          }},
+          "value_capture_analysis": {{
+            "summary": "Brief summary",
+            "entities": ["Entity 1", "Entity 2"]
+          }},
+          "actionable_path_for_individuals": {{
+            "summary": "Brief summary",
+            "paths": ["Path 1", "Path 2"]
+          }}
+        }}
+      }}
+    ]
+  }}
+]
+"""
+            step2_response = client.models.generate_content(
+                model="gemini-3.8-flash",
+                contents=step2_prompt,
+                config=types.GenerateContentConfig(
                     response_mime_type="application/json"
                 )
             )
-            response = chat.send_message(prompt)
 
-            raw_text = None
-            if hasattr(response, 'text') and response.text:
-                raw_text = response.text.strip()
-            elif hasattr(response, 'candidates') and response.candidates:
-                # 兜底方案：从 candidates 的 text part 提取
-                parts = response.candidates[0].content.parts
-                text_parts = [p.text for p in parts if hasattr(p, 'text') and p.text]
-                if text_parts:
-                    raw_text = "".join(text_parts).strip()
-
-            if not raw_text:
-                raise ValueError("Received empty or None response text from Gemini Chat API")
-
-            # 清理 Markdown 代码块格式
+            raw_text = step2_response.text.strip()
             if raw_text.startswith("```"):
                 raw_text = re.sub(r'^```[a-zA-Z]*\n', '', raw_text)
                 raw_text = re.sub(r'\n```$', '', raw_text)
@@ -167,14 +229,12 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
             err_str = str(e)
             if "429" in err_str and attempt < max_retries:
                 wait_time = 65
-                print(f"⚠️ Rate limited (429). Waiting {wait_time}s to cooldown API quota... (Attempt {attempt}/{max_retries})")
+                print(f"⚠️ Rate limited (429). Waiting {wait_time}s to cooldown... (Attempt {attempt}/{max_retries})")
                 time.sleep(wait_time)
             else:
                 print(f"❌ Failed to fetch from Gemini API: {e}")
-                if 'response' in locals():
-                    print(f"Raw Response Content:\n{getattr(response, 'text', None)}")
                 return None
-
+                
 def merge_new_snapshots(existing_db, new_projects, current_week_str):
     """合并最新快照至 JSON 数据库"""
     db_map = {proj["id"]: proj for proj in existing_db}
