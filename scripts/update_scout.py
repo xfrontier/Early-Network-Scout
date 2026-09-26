@@ -1,6 +1,7 @@
 import os
 import json
 import re
+import time
 from datetime import datetime
 from urllib.parse import urlparse
 from google import genai
@@ -122,7 +123,7 @@ def save_database(data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_str):
-    """利用 Gemini API + Google Search Grounding 抓取并评估最新 Top 10 项目"""
+    """利用 Gemini API + Google Search Grounding 抓取并评估最新 Top 10 项目（支持 429 配额自动冷却重试）"""
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("⚠️ GEMINI_API_KEY missing. Skipping live AI scouting.")
@@ -131,7 +132,6 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
     print("🔑 GEMINI_API_KEY detected. Initializing Gemini Client with Search Grounding...")
     client = genai.Client(api_key=api_key)
     
-    # 提取现有数据库里的 ID 映射提示上下文
     existing_context = [
         {
             "id": p["id"],
@@ -148,25 +148,41 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
         existing_projects_context=json.dumps(existing_context, ensure_ascii=False, indent=2)
     )
 
-    try:
-        response = client.models.generate_content(
-            model="gemini-3.8-flash",
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                tools=[{"google_search": {}}],
-                response_mime_type="application/json"
+    max_retries = 3
+    for attempt in range(1, max_retries + 1):
+        try:
+            response = client.models.generate_content(
+                model="gemini-3.8-flash",
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    tools=[{"google_search": {}}],
+                    response_mime_type="application/json"
+                )
             )
-        )
-        return json.loads(response.text)
-    except Exception as e:
-        print(f"❌ Failed to fetch from Gemini API: {e}")
-        return None
+            
+            raw_text = response.text.strip()
+            if raw_text.startswith("```"):
+                raw_text = re.sub(r'^```[a-zA-Z]*\n', '', raw_text)
+                raw_text = re.sub(r'\n```$', '', raw_text)
+
+            return json.loads(raw_text)
+
+        except Exception as e:
+            err_str = str(e)
+            if "429" in err_str and attempt < max_retries:
+                wait_time = attempt * 15  # 遇到限流自动等待 15 秒、30 秒冷却 API 配额
+                print(f"⚠️ Rate limited (429). Waiting {wait_time}s to cooldown API quota... (Attempt {attempt}/{max_retries})")
+                time.sleep(wait_time)
+            else:
+                print(f"❌ Failed to fetch from Gemini API: {e}")
+                if 'response' in locals() and hasattr(response, 'text'):
+                    print(f"Raw Response Content:\n{response.text}")
+                return None
 
 def merge_new_snapshots(existing_db, new_projects, current_week_str):
     """将 Gemini 最新分析到的 Top 10 快照追加合并至现有的 JSON 数据库中（含多重 ID 强校准机制）"""
     db_map = {proj["id"]: proj for proj in existing_db}
 
-    # 建立名称/GitHub 仓库到已有 ID 的快速映射字典
     alias_to_id = {}
     for p in existing_db:
         p_id = p["id"]
@@ -176,12 +192,10 @@ def merge_new_snapshots(existing_db, new_projects, current_week_str):
             alias_to_id[gh_clean] = p_id
 
     for rank, new_proj in enumerate(new_projects, start=1):
-        # --- 多重 ID 强校准逻辑 ---
         gh = new_proj.get("github_repo", "").lower().rstrip("/")
         name_key = new_proj["name"].lower()
         provided_id = new_proj.get("id", "")
 
-        # 优先匹配 GitHub 仓库/项目名称，其次校验 provided_id，最后触发确定性算法生成
         if gh and gh in alias_to_id:
             p_id = alias_to_id[gh]
         elif name_key in alias_to_id:
@@ -191,13 +205,11 @@ def merge_new_snapshots(existing_db, new_projects, current_week_str):
         else:
             p_id = generate_canonical_id(new_proj)
 
-        # 赋回校准后的统一 ID
         new_proj["id"] = p_id
         new_snapshot = new_proj["weekly_snapshots"][0]
         new_snapshot["rank"] = rank
 
         if p_id in db_map:
-            # 如果项目已在数据库中，将当周快照覆盖或追加回该项目
             existing_snapshots = db_map[p_id]["weekly_snapshots"]
             snapshot_weeks = [s["week"] for s in existing_snapshots]
             if current_week_str in snapshot_weeks:
@@ -206,7 +218,6 @@ def merge_new_snapshots(existing_db, new_projects, current_week_str):
             else:
                 existing_snapshots.append(new_snapshot)
         else:
-            # 新项目则直接存入数据库，并更新别名映射字典
             db_map[p_id] = new_proj
             alias_to_id[name_key] = p_id
             if gh:
@@ -215,10 +226,9 @@ def merge_new_snapshots(existing_db, new_projects, current_week_str):
     return list(db_map.values())
 
 def generate_report_cards(top_10_projects, current_week_str, current_date_str):
-    """覆盖生成当周 Top 10 项目的独立 Opportunity Card Markdown 文件（100% 001 格式）"""
+    """覆盖生成当周 Top 10 项目的独立 Opportunity Card Markdown 文件"""
     os.makedirs(REPORTS_DIR, exist_ok=True)
     
-    # 清空 reports 文件夹下的旧文件（只保留当周最新卡片）
     for file in os.listdir(REPORTS_DIR):
         file_path = os.path.join(REPORTS_DIR, file)
         if os.path.isfile(file_path):
@@ -238,7 +248,6 @@ def generate_report_cards(top_10_projects, current_week_str, current_date_str):
         val_entities = details.get("value_capture_analysis", {}).get("entities", [])
         path_list = details.get("actionable_path_for_individuals", {}).get("paths", [])
 
-        # 100% 对齐原版 001-x402-Payment-Rails.md 的格式
         card_md = f"""# Opportunity Card: {item['name']}
 
 - **Project ID**: `{item['id']}`
@@ -302,7 +311,7 @@ def generate_report_cards(top_10_projects, current_week_str, current_date_str):
     return card_file_map
 
 def render_readme(projects, current_week_str, current_date_str):
-    """根据数据库最新快照生成 reports 文件并渲染 README.md（100% 原版 README 样式）"""
+    """根据数据库最新快照生成 reports 文件并渲染 README.md"""
     active_projects = []
     
     for proj in projects:
@@ -318,14 +327,11 @@ def render_readme(projects, current_week_str, current_date_str):
                 "snapshot": latest_snapshot
             })
 
-    # 按最新得分降序排列，取 Top 10
     active_projects.sort(key=lambda x: x["snapshot"]["score"], reverse=True)
     top_10 = active_projects[:10]
 
-    # 1. 生成当周的 10 个 Card Markdown 文件
     card_file_map = generate_report_cards(top_10, current_week_str, current_date_str)
 
-    # 2. 100% 还原原版 README.md 格式
     readme_content = f"""# Early Network Scout (Base / x402 Ecosystem)
 
 Weekly automated scouting & evaluation system for identifying high-potential early network opportunities, protocol innovations, and micro-payment rails on Base / x402 ecosystem.
@@ -382,19 +388,14 @@ def main():
     current_week_str = f"{current_year}-W{current_week:02d}"
     current_date_str = now.strftime("%Y-%m-%d")
 
-    # 1. 加载本地现有数据库
     db = load_database()
-
-    # 2. 调用 Gemini API 联网抓取最新全网区块链 Top 10（带现有数据库上下文）
     new_projects = fetch_top_projects_from_gemini(db, current_week_str, current_date_str)
 
-    # 3. 追加更新 JSON 数据库并保存
     if new_projects:
         db = merge_new_snapshots(db, new_projects, current_week_str)
         save_database(db)
-        print(f"✅ Database `data/projects.json` successfully updated!")
+        print(f"✅ Database `data/project.json` successfully updated!")
 
-    # 4. 生成当周 10 个 Card 并在 README.md 中建立关联跳转链接
     render_readme(db, current_week_str, current_date_str)
 
 if __name__ == "__main__":
