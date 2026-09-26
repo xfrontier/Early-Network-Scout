@@ -2,8 +2,8 @@ name: Weekly Early Network Scout
 
 on:
   schedule:
-    # 每周六 UTC 21:00 自动触发（即北京时间周日上午 05:00）
-    - cron: '0 21 * * 6'
+    # UTC 时间周二 16:00 = 北京时间周三 00:00
+    - cron: '0 16 * * 2'
   workflow_dispatch: # 允许手动点击按钮测试
 
 # 关键设置：赋予 GitHub Actions 对仓库的写入/提交权限
