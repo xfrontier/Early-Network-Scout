@@ -109,7 +109,7 @@ def save_database(data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_str):
-    """利用 Gemini API + Google Search Grounding 抓取并评估最新 Top 10 项目（专为免费 API 优化）"""
+    """利用 Gemini API + Google Search Grounding 抓取并评估最新 Top 10 项目（兼顾安全提取）"""
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("⚠️ GEMINI_API_KEY missing. Skipping live AI scouting.")
@@ -118,7 +118,7 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
     print("🔑 GEMINI_API_KEY detected. Initializing Gemini Client with Search Grounding...")
     client = genai.Client(api_key=api_key)
     
-    # 仅保留最近 10 个项目的必要信息，大幅节省 Input Tokens
+    # 仅保留最近 10 个项目的必要信息，节省 Input Tokens
     existing_context = [
         {"id": p["id"], "name": p["name"]}
         for p in existing_db[-10:]
@@ -142,7 +142,21 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
                 )
             )
             
-            raw_text = response.text.strip()
+            # 安全提取返回文本，防止 response.text 为 None 导致崩溃
+            raw_text = None
+            if hasattr(response, 'text') and response.text:
+                raw_text = response.text.strip()
+            elif hasattr(response, 'candidates') and response.candidates:
+                # 兜底：直接从 candidates 里面拼接 text 内容
+                parts = response.candidates[0].content.parts
+                text_parts = [p.text for p in parts if hasattr(p, 'text') and p.text]
+                if text_parts:
+                    raw_text = "".join(text_parts).strip()
+
+            if not raw_text:
+                raise ValueError("Received empty or None response text from Gemini API")
+
+            # 清理 Markdown 代码块包裹标记
             if raw_text.startswith("```"):
                 raw_text = re.sub(r'^```[a-zA-Z]*\n', '', raw_text)
                 raw_text = re.sub(r'\n```$', '', raw_text)
@@ -157,8 +171,8 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
                 time.sleep(wait_time)
             else:
                 print(f"❌ Failed to fetch from Gemini API: {e}")
-                if 'response' in locals() and hasattr(response, 'text'):
-                    print(f"Raw Response Content:\n{response.text}")
+                if 'response' in locals():
+                    print(f"Raw Response Content:\n{getattr(response, 'text', None)}")
                 return None
 
 def merge_new_snapshots(existing_db, new_projects, current_week_str):
