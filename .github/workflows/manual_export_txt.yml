@@ -1,0 +1,40 @@
+name: Manual Export Plain Text Cards
+
+# 仅配置手动触发选项
+on:
+  workflow_dispatch:
+
+jobs:
+  export-txt:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 拉取仓库最新代码和 reports/ 目录
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. 设置 Python 环境
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 3. 运行转换脚本生成/覆盖 txt
+      - name: Run Export TXT Script
+        run: |
+          python scripts/export_txt.py
+
+      # 4. 将生成的 latest_opportunities_plain.txt 自动提交更新回 GitHub 仓库
+      - name: Commit and Push Plain Text File
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add reports/latest_opportunities_plain.txt
+          git commit -m "Manual export: update latest_opportunities_plain.txt [skip ci]" || exit 0
+          git push
+
+      # 5. 同时打包为 Artifact，方便在网页上直接点击下载 zip 包
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Plain-Text-Report
+          path: reports/latest_opportunities_plain.txt
