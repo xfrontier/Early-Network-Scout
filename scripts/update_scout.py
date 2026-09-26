@@ -2,6 +2,7 @@ import os
 import json
 import re
 from datetime import datetime
+from urllib.parse import urlparse
 from google import genai
 from google.genai import types
 
@@ -11,10 +12,17 @@ JSON_PATH = os.path.join(BASE_DIR, "data", "projects.json")
 README_PATH = os.path.join(BASE_DIR, "README.md")
 REPORTS_DIR = os.path.join(BASE_DIR, "reports")
 
-# 2. 全局区块链领域的 Gemini 评估 Prompt
+# 2. 全局区块链领域的 Gemini 评估 Prompt 模板
 PROMPT_TEMPLATE = """
 You are an expert Web3 & Blockchain ecosystem analyst. 
 Search the web for the top 10 most promising early-stage blockchain projects (across the entire Web3 ecosystem: L1/L2, AI x Crypto, DeFi, DePIN, RWA, Account Abstraction, etc.) for the current week ({current_week_str}).
+
+CRITICAL IDENTIFIER RULE:
+Here is the list of existing projects in our database:
+{existing_projects_context}
+
+If a project you find matches any project in the existing list above (by project name, official domain, or GitHub repo), YOU MUST REUSE ITS EXACT "id".
+Only assign a new lowercase hyphenated slug for "id" if it is a completely new project not in the list.
 
 Evaluate each project using a 100-point scale across 4 standardized core dimensions:
 1. Developer & Code Ecosystem (Provide quantitative metrics: github_stars, github_forks, commits_30d, active_contributors, plus a brief summary)
@@ -75,9 +83,30 @@ Output MUST strictly be a valid JSON list containing 10 project objects. Each pr
 """
 
 def slugify(text):
-    """将项目名称转换为适合文件名的 slug"""
+    """辅助函数：将文本转换为规范的 slug"""
     text = text.lower()
     return re.sub(r'[^a-z0-9]+', '-', text).strip('-')
+
+def generate_canonical_id(proj):
+    """
+    确定性 ID 生成算法（兜底逻辑）：
+    优先基于 GitHub 仓库名或官网域名，次选基于规范化的项目名称生成。
+    """
+    github_url = proj.get("github_repo", "")
+    if "github.com/" in github_url:
+        path = urlparse(github_url).path.strip("/")
+        if path:
+            return path.lower().replace("/", "-")
+
+    official_url = proj.get("official_url", "")
+    if official_url and official_url.startswith("http"):
+        domain = urlparse(official_url).netloc.replace("www.", "")
+        if domain:
+            return domain.lower().replace(".", "-")
+
+    name = proj.get("name", "").lower()
+    slug = slugify(name)
+    return f"proj-{slug}"
 
 def load_database():
     """读取现有 JSON 数据库"""
@@ -92,7 +121,7 @@ def save_database(data):
     with open(JSON_PATH, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-def fetch_top_projects_from_gemini(current_week_str, current_date_str):
+def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_str):
     """利用 Gemini API + Google Search Grounding 抓取并评估最新 Top 10 项目"""
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
@@ -102,9 +131,21 @@ def fetch_top_projects_from_gemini(current_week_str, current_date_str):
     print("🔑 GEMINI_API_KEY detected. Initializing Gemini Client with Search Grounding...")
     client = genai.Client(api_key=api_key)
     
+    # 提取现有数据库里的 ID 映射提示上下文
+    existing_context = [
+        {
+            "id": p["id"],
+            "name": p["name"],
+            "official_url": p.get("official_url", ""),
+            "github_repo": p.get("github_repo", "")
+        }
+        for p in existing_db
+    ]
+
     prompt = PROMPT_TEMPLATE.format(
         current_week_str=current_week_str,
-        current_date_str=current_date_str
+        current_date_str=current_date_str,
+        existing_projects_context=json.dumps(existing_context, ensure_ascii=False, indent=2)
     )
 
     try:
@@ -122,15 +163,41 @@ def fetch_top_projects_from_gemini(current_week_str, current_date_str):
         return None
 
 def merge_new_snapshots(existing_db, new_projects, current_week_str):
-    """将 Gemini 最新分析到的 Top 10 快照追加合并至现有的 JSON 数据库中"""
+    """将 Gemini 最新分析到的 Top 10 快照追加合并至现有的 JSON 数据库中（含多重 ID 强校准机制）"""
     db_map = {proj["id"]: proj for proj in existing_db}
 
+    # 建立名称/GitHub 仓库到已有 ID 的快速映射字典
+    alias_to_id = {}
+    for p in existing_db:
+        p_id = p["id"]
+        alias_to_id[p["name"].lower()] = p_id
+        if p.get("github_repo"):
+            gh_clean = p["github_repo"].lower().rstrip("/")
+            alias_to_id[gh_clean] = p_id
+
     for rank, new_proj in enumerate(new_projects, start=1):
-        p_id = new_proj["id"]
+        # --- 多重 ID 强校准逻辑 ---
+        gh = new_proj.get("github_repo", "").lower().rstrip("/")
+        name_key = new_proj["name"].lower()
+        provided_id = new_proj.get("id", "")
+
+        # 优先匹配 GitHub 仓库/项目名称，其次校验 provided_id，最后触发确定性算法生成
+        if gh and gh in alias_to_id:
+            p_id = alias_to_id[gh]
+        elif name_key in alias_to_id:
+            p_id = alias_to_id[name_key]
+        elif provided_id and provided_id in db_map:
+            p_id = provided_id
+        else:
+            p_id = generate_canonical_id(new_proj)
+
+        # 赋回校准后的统一 ID
+        new_proj["id"] = p_id
         new_snapshot = new_proj["weekly_snapshots"][0]
         new_snapshot["rank"] = rank
 
         if p_id in db_map:
+            # 如果项目已在数据库中，将当周快照覆盖或追加回该项目
             existing_snapshots = db_map[p_id]["weekly_snapshots"]
             snapshot_weeks = [s["week"] for s in existing_snapshots]
             if current_week_str in snapshot_weeks:
@@ -139,12 +206,16 @@ def merge_new_snapshots(existing_db, new_projects, current_week_str):
             else:
                 existing_snapshots.append(new_snapshot)
         else:
+            # 新项目则直接存入数据库，并更新别名映射字典
             db_map[p_id] = new_proj
+            alias_to_id[name_key] = p_id
+            if gh:
+                alias_to_id[gh] = p_id
 
     return list(db_map.values())
 
 def generate_report_cards(top_10_projects, current_week_str, current_date_str):
-    """生成当周 Top 10 项目的独立 Opportunity Card（100% 原版 001 样式）"""
+    """覆盖生成当周 Top 10 项目的独立 Opportunity Card Markdown 文件（100% 001 格式）"""
     os.makedirs(REPORTS_DIR, exist_ok=True)
     
     # 清空 reports 文件夹下的旧文件（只保留当周最新卡片）
@@ -251,7 +322,7 @@ def render_readme(projects, current_week_str, current_date_str):
     active_projects.sort(key=lambda x: x["snapshot"]["score"], reverse=True)
     top_10 = active_projects[:10]
 
-    # 1. 生成当周的 10 个 Card Markdown 文件，返回 relative path 映射
+    # 1. 生成当周的 10 个 Card Markdown 文件
     card_file_map = generate_report_cards(top_10, current_week_str, current_date_str)
 
     # 2. 100% 还原原版 README.md 格式
@@ -314,8 +385,8 @@ def main():
     # 1. 加载本地现有数据库
     db = load_database()
 
-    # 2. 调用 Gemini API 联网抓取最新全网区块链 Top 10
-    new_projects = fetch_top_projects_from_gemini(current_week_str, current_date_str)
+    # 2. 调用 Gemini API 联网抓取最新全网区块链 Top 10（带现有数据库上下文）
+    new_projects = fetch_top_projects_from_gemini(db, current_week_str, current_date_str)
 
     # 3. 追加更新 JSON 数据库并保存
     if new_projects:
