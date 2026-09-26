@@ -1,0 +1,43 @@
+name: Weekly Early Network Scout
+
+on:
+  schedule:
+    # 每周六 UTC 21:00 自动触发（即北京时间周日上午 05:00）
+    - cron: '0 21 * * 6'
+  workflow_dispatch: # 允许在 GitHub 网页界面手动点击按钮随时触发运行测试
+
+jobs:
+  scout-and-update:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 拉取仓库代码
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # 2. 设置 Python 环境
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # 3. 安装依赖包 (Google GenAI SDK)
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install google-genai
+
+      # 4. 执行更新脚本 (自动注入 GEMINI_API_KEY)
+      - name: Run Scout Script
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python scripts/update_scout.py
+
+      # 5. 自动 Commit 并 Push 更改回仓库
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/projects.json README.md reports/
+          git diff-index --quiet HEAD || (git commit -m "chore: automated weekly ecosystem scout update" && git push)
