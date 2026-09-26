@@ -4,7 +4,11 @@ on:
   schedule:
     # 每周六 UTC 21:00 自动触发（即北京时间周日上午 05:00）
     - cron: '0 21 * * 6'
-  workflow_dispatch: # 允许在 GitHub 网页界面手动点击按钮随时触发运行测试
+  workflow_dispatch: # 允许手动点击按钮测试
+
+# 关键设置：赋予 GitHub Actions 对仓库的写入/提交权限
+permissions:
+  contents: write
 
 jobs:
   scout-and-update:
