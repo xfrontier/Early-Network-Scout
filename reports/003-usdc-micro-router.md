@@ -3,50 +3,48 @@
 - **Project ID**: `proj-usdc-micro-router`
 - **Category**: DeFi / Liquidity Routing
 - **First Seen / Updated**: 2026-09-26 (2026-W39)
-- **Weekly Score**: **82 / 100** (Rank #3)
+- **Weekly Score**: **89 / 100** (Rank #3)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Optimized liquidity routing engine designed for sub-cent USDC transfers with minimal slippage and gas overhead.
+A high-throughput routing engine and liquidity aggregator specialized in splitting, streaming, and aggregating sub-cent USDC transfers for high-frequency M2M API requests.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Efficient smart contract codebase with audited micro-batching algorithms.
+- **Summary**: 410 stars, 85 forks, and 12 merged commits in W39 optimizing ERC-3009 transferWithAuthorization batch validations.
 - **Hard Metrics**:
-  - GitHub Stars: `650`
-  - GitHub Forks: `95`
-  - Commits (30d): `24`
-  - Active Contributors: `6`
+  - GitHub Stars: `410`
+  - GitHub Forks: `85`
+  - Commits (30d): `38`
+  - Active Contributors: `14`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: High volume of micro-settlements batched dynamically to minimize Base L2 execution costs.
+- **Summary**: Routed $8.9M USDC across 4.2M distinct micro-transactions this week while lowering average transaction overhead below $0.0008 via batched rollup proofs.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `115000` txs
-  - 7d Active Addresses: `7400`
-  - 7d USD Volume: `$24500.0`
-  - Avg Gas Fee: `$5e-05`
+  - 7d Transaction Volume: `4200000` txs
+  - 7d Active Addresses: `58000`
+  - 7d USD Volume: `$8900000.0`
+  - Avg Gas Fee: `$0.0008`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Captures a fractional protocol fee (e.g., 0.01%) per routed micro-transaction.
+Captures a 0.02% router aggregation spread and dynamic fees on flash-credit lines supplied to agents during multi-hop execution.
 
 ### Key Value-Capturing Entities:
-1. Liquidity Providers: Earn micro-yields on pooled USDC liquidity.
-1. Routing Relayers: Capture gas optimization arbitrage and batch fees.
-1. Micro-Merchants: Benefit from lower per-transaction overhead.
+1. Micro Router Liquidity Providers
+1. Routing Engine Operators
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Liquidity provision and router node operation for passive micro-yields.
+Deposit liquidity to earn routing spreads or connect agent clusters directly to eliminate balance fragmentation.
 
 ### Action Pathways:
-1. Developer Path: Integrate routing smart contracts into dApps requiring micro-payments.
-1. Operator Path: Run automated batching relayers to collect execution rewards.
-1. Participant Path: Deposit USDC into micro-liquidity pools to earn routing fee share.
+1. Deposit USDC liquidity to high-throughput routing pools to earn steady delta-neutral micro-routing spreads.
+1. Connect off-chain agent clusters to the micro-router contract to prevent wallet dust fragmentation.

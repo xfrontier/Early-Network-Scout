@@ -3,50 +3,49 @@
 - **Project ID**: `proj-x402-payment-rails`
 - **Category**: x402 Infrastructure / Micropayments
 - **First Seen / Updated**: 2026-09-26 (2026-W39)
-- **Weekly Score**: **86 / 100** (Rank #1)
+- **Weekly Score**: **96 / 100** (Rank #1)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Zero-friction micropayment infrastructure leveraging HTTP 402 status codes for Autonomous AI Agents on Base network.
+An open HTTP-native standard leveraging status code 402 to facilitate instant, zero-friction stablecoin micropayments for web resources, APIs, and autonomous agent queries.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Native adoption of HTTP 402 specifications with lightweight SDKs, offering permissionless API metering for AI Agents.
+- **Summary**: 3,450+ stars and 480+ forks across Foundation repos; 18 active PRs merged in W39 adding CAIP-2 multi-network support and idempotent replay protection.
 - **Hard Metrics**:
-  - GitHub Stars: `1240`
-  - GitHub Forks: `185`
-  - Commits (30d): `42`
-  - Active Contributors: `12`
+  - GitHub Stars: `3450`
+  - GitHub Forks: `480`
+  - Commits (30d): `72`
+  - Active Contributors: `28`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: High-throughput and ultra-low Gas fees on Base L2, smoothly sustaining $0.001-level high-frequency micropayment settlements with millisecond-level finality.
+- **Summary**: Settling ~$14.2M daily run-rate volume across Base, Arbitrum, and Solana, with over 120M cumulative settled HTTP 402 micro-transactions on Base.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `142500` txs
-  - 7d Active Addresses: `8900`
-  - 7d USD Volume: `$18450.0`
-  - Avg Gas Fee: `$8e-05`
+  - 7d Transaction Volume: `12500000` txs
+  - 7d Active Addresses: `185000`
+  - 7d USD Volume: `$99400000.0`
+  - Avg Gas Fee: `$0.0003`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Captures value across three core ecosystem entities by replacing recurring subscriptions with pay-per-use micro-settlements.
+Captures non-custodial facilitator settlement fee tiers (0.05% or sub-cent fixed take-rate) with gas optimizations routed to L2 sequencers.
 
 ### Key Value-Capturing Entities:
-1. API Service Providers: Instant USDC settlement per call with zero chargeback risk.
-1. AI Agent Operators: Frictionless micro-payments enable fully autonomous Machine-to-Machine (M2M) service consumption.
-1. Base L2 Network & Relayers: Protocol fee capture on micro-transactions, driving Base L2 sequence revenue.
+1. Facilitator Relayers
+1. L2 Sequencers
+1. Enterprise API Gateways
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Three clear pathways for individual participants and developers to monetize and build within the x402 ecosystem.
+Integrate middleware to gate AI-facing APIs behind USDC micropayments or run facilitator relay nodes.
 
 ### Action Pathways:
-1. Developer Path: Wrap legacy REST APIs with x402 headers to enable instant pay-per-use monetization.
-1. Operator Path: Deploy autonomous AI agents to offer specialized on-chain micro-services.
-1. Participant Path: Provide liquidity micro-routing nodes or participate in facilitator staking.
+1. Integrate @x402/middleware into Express/FastAPI endpoints to gate AI-facing APIs behind USDC micropayments.
+1. Run open facilitator nodes for batching EIP-712 payment authorization payloads.

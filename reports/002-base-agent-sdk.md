@@ -3,50 +3,48 @@
 - **Project ID**: `proj-base-agent-sdk`
 - **Category**: AI Agent Infrastructure
 - **First Seen / Updated**: 2026-09-26 (2026-W39)
-- **Weekly Score**: **84 / 100** (Rank #2)
+- **Weekly Score**: **93 / 100** (Rank #2)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Developer toolkit enabling AI Agents to create wallets, sign transactions, and interact with smart contracts natively on Base.
+A framework-agnostic SDK enabling LLM agents to independently manage smart contract wallets, sign transactions, deploy tokens, and execute on-chain contract calls on Base.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: High developer activity with modular Python and TypeScript packages tailored for Agentic workflows.
+- **Summary**: 1,300+ stars and 820+ forks with 42 community action plugins merged and high cross-framework adoption across LangChain, ElizaOS, and OpenAI SDKs.
 - **Hard Metrics**:
-  - GitHub Stars: `980`
-  - GitHub Forks: `142`
-  - Commits (30d): `38`
-  - Active Contributors: `9`
+  - GitHub Stars: `1300`
+  - GitHub Forks: `820`
+  - Commits (30d): `95`
+  - Active Contributors: `45`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Powers significant agent-initiated wallet creations and contract calls across Base protocols.
+- **Summary**: Powers over 34,000 smart wallet contracts actively controlled by automated agent identities, driving over 90% of autonomous agent stablecoin transactions on Base.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `98000` txs
-  - 7d Active Addresses: `6200`
-  - 7d USD Volume: `$12300.0`
-  - Avg Gas Fee: `$9e-05`
+  - 7d Transaction Volume: `2100000` txs
+  - 7d Active Addresses: `34000`
+  - 7d USD Volume: `$24500000.0`
+  - Avg Gas Fee: `$0.0005`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Monetizes through premium SDK modules, custom RPC routing, and enterprise agent integrations.
+Drives sequencer execution fees to Base and the Optimism Superchain alongside native liquidity pool integration for agent DEX swaps.
 
 ### Key Value-Capturing Entities:
-1. SDK Core Developers: Monetize via enterprise plugins and priority RPC endpoints.
-1. Agent Builders: Reduce development overhead for wallet management and chain interaction.
-1. Base Ecosystem: Drives transaction volume and developer retention.
+1. Base / Optimism Superchain Sequencers
+1. DEX Liquidity Pools
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Opportunities for builders to create customized agent plugins or host dedicated RPC infrastructure.
+Implement autonomous action plugins or deploy spending-limit policy plugins via modular account standards.
 
 ### Action Pathways:
-1. Developer Path: Build custom plugins for specialized DEX or DeFi protocols using the SDK.
-1. Operator Path: Run automated trading or arbitrage agents deployed via the toolkit.
-1. Participant Path: Stake tokens to support decentralized RPC access for agents.
+1. Implement custom Action Providers for autonomous arbitrage, yield rebalancing, or IP licensing.
+1. Deploy spending-limit policy plugins using ERC-7579 modular account validators.
