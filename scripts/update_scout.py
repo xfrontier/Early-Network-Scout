@@ -75,7 +75,7 @@ Output MUST strictly be a valid JSON list containing 10 project objects. Each pr
 """
 
 def slugify(text):
-    """辅助函数：将项目名称转换为适合文件名的 slug"""
+    """将项目名称转换为适合文件名的 slug"""
     text = text.lower()
     return re.sub(r'[^a-z0-9]+', '-', text).strip('-')
 
@@ -144,10 +144,10 @@ def merge_new_snapshots(existing_db, new_projects, current_week_str):
     return list(db_map.values())
 
 def generate_report_cards(top_10_projects, current_week_str, current_date_str):
-    """覆盖生成当周 Top 10 项目的独立 Opportunity Card Markdown 文件"""
+    """生成当周 Top 10 项目的独立 Opportunity Card（100% 原版 001 样式）"""
     os.makedirs(REPORTS_DIR, exist_ok=True)
     
-    # 清空 reports 文件夹下的旧文件（只保留当周最新）
+    # 清空 reports 文件夹下的旧文件（只保留当周最新卡片）
     for file in os.listdir(REPORTS_DIR):
         file_path = os.path.join(REPORTS_DIR, file)
         if os.path.isfile(file_path):
@@ -159,7 +159,7 @@ def generate_report_cards(top_10_projects, current_week_str, current_date_str):
         snapshot = item["snapshot"]
         details = snapshot["card_details"]
         slug = slugify(item['name'])
-        filename = f"top{idx:02d}-{slug}.md"
+        filename = f"{idx:03d}-{slug}.md"
         filepath = os.path.join(REPORTS_DIR, filename)
 
         dev_m = details.get("developer_code_ecosystem", {}).get("metrics", {})
@@ -167,56 +167,60 @@ def generate_report_cards(top_10_projects, current_week_str, current_date_str):
         val_entities = details.get("value_capture_analysis", {}).get("entities", [])
         path_list = details.get("actionable_path_for_individuals", {}).get("paths", [])
 
-        card_md = f"""# 📄 Opportunity Card: {item['name']}
+        # 100% 对齐原版 001-x402-Payment-Rails.md 的格式
+        card_md = f"""# Opportunity Card: {item['name']}
 
-> **Week**: {current_week_str} | **Date**: {current_date_str} | **Rank**: #{idx} | **Score**: {snapshot['score']} / 100  
-> **Category**: {item['category']}  
-> **Official URL**: {item.get('official_url', 'N/A')}  
-> **GitHub Repo**: {item.get('github_repo', 'N/A')}
+- **Project ID**: `{item['id']}`
+- **Category**: {item['category']}
+- **First Seen / Updated**: {current_date_str} ({current_week_str})
+- **Weekly Score**: **{snapshot['score']} / 100** (Rank #{idx})
+- **Official Links**: [Official Site]({item.get('official_url', '#')}) | [GitHub Repo]({item.get('github_repo', '#')})
 
 ---
 
-### 💡 Core Value Proposition
+## 📌 Core Value Proposition
 {details.get('core_value', '')}
 
 ---
 
-### 🛠️ 1. Developer & Code Ecosystem
+## 🛠️ 1. Developer & Code Ecosystem
 - **Summary**: {details.get('developer_code_ecosystem', {}).get('summary', '')}
-- **Metrics**:
-  - **GitHub Stars**: {dev_m.get('github_stars', 'N/A')}
-  - **GitHub Forks**: {dev_m.get('github_forks', 'N/A')}
-  - **Commits (30d)**: {dev_m.get('commits_30d', 'N/A')}
-  - **Active Contributors**: {dev_m.get('active_contributors', 'N/A')}
+- **Hard Metrics**:
+  - GitHub Stars: `{dev_m.get('github_stars', 'N/A')}`
+  - GitHub Forks: `{dev_m.get('github_forks', 'N/A')}`
+  - Commits (30d): `{dev_m.get('commits_30d', 'N/A')}`
+  - Active Contributors: `{dev_m.get('active_contributors', 'N/A')}`
 
 ---
 
-### ⛓️ 2. On-Chain & Network Dynamics
+## ⛓️ 2. On-Chain & Network Dynamics
 - **Summary**: {details.get('onchain_network_dynamics', {}).get('summary', '')}
-- **Metrics**:
-  - **7d Transactions**: {onchain_m.get('tx_count_7d', 'N/A')}
-  - **7d Active Addresses**: {onchain_m.get('active_addresses_7d', 'N/A')}
-  - **7d Volume (USD)**: ${onchain_m.get('volume_usd_7d', 'N/A')}
-  - **Avg Gas Cost**: ${onchain_m.get('avg_gas_usd', 'N/A')}
+- **Hard Metrics**:
+  - 7d Transaction Volume: `{onchain_m.get('tx_count_7d', 'N/A')}` txs
+  - 7d Active Addresses: `{onchain_m.get('active_addresses_7d', 'N/A')}`
+  - 7d USD Volume: `${onchain_m.get('volume_usd_7d', 'N/A')}`
+  - Avg Gas Fee: `${onchain_m.get('avg_gas_usd', 'N/A')}`
 
 ---
 
-### 💰 3. Value Capture Analysis
-- **Summary**: {details.get('value_capture_analysis', {}).get('summary', '')}
-- **Key Value-Capturing Entities**:
+## 💰 3. Value Capture Analysis
+{details.get('value_capture_analysis', {}).get('summary', '')}
+
+### Key Value-Capturing Entities:
 """
         for entity in val_entities:
-            card_md += f"  - {entity}\n"
+            card_md += f"1. {entity}\n"
 
         card_md += f"""
 ---
 
-### 🎯 4. Actionable Path for Individuals
-- **Summary**: {details.get('actionable_path_for_individuals', {}).get('summary', '')}
-- **Action Pathways**:
+## 🎯 4. Actionable Path for Individuals
+{details.get('actionable_path_for_individuals', {}).get('summary', '')}
+
+### Action Pathways:
 """
         for path in path_list:
-            card_md += f"  - {path}\n"
+            card_md += f"1. {path}\n"
 
         with open(filepath, "w", encoding="utf-8") as f:
             f.write(card_md)
@@ -227,7 +231,7 @@ def generate_report_cards(top_10_projects, current_week_str, current_date_str):
     return card_file_map
 
 def render_readme(projects, current_week_str, current_date_str):
-    """根据数据库中最新一周的 snapshot 生成 reports 文件，并渲染 README.md 首页"""
+    """根据数据库最新快照生成 reports 文件并渲染 README.md（100% 原版 README 样式）"""
     active_projects = []
     
     for proj in projects:
@@ -240,8 +244,6 @@ def render_readme(projects, current_week_str, current_date_str):
                 "id": proj.get("id"),
                 "name": proj["name"],
                 "category": proj["category"],
-                "official_url": proj.get("official_url", ""),
-                "github_repo": proj.get("github_repo", ""),
                 "snapshot": latest_snapshot
             })
 
@@ -249,36 +251,34 @@ def render_readme(projects, current_week_str, current_date_str):
     active_projects.sort(key=lambda x: x["snapshot"]["score"], reverse=True)
     top_10 = active_projects[:10]
 
-    # 1. 先生成当周的 10 个 Card Markdown 文件，并返回 relative path 路径映射
+    # 1. 生成当周的 10 个 Card Markdown 文件，返回 relative path 映射
     card_file_map = generate_report_cards(top_10, current_week_str, current_date_str)
 
-    # 2. 组装 README.md 内容
-    readme_content = f"""# 🚀 Early Network Scout - Top 10 Blockchain Projects
+    # 2. 100% 还原原版 README.md 格式
+    readme_content = f"""# Early Network Scout (Base / x402 Ecosystem)
 
-> **Automated Cross-Chain Scouting & Quantitative Evaluation System**  
-> *Last Updated: {current_date_str} (Week: {current_week_str})*
+Weekly automated scouting & evaluation system for identifying high-potential early network opportunities, protocol innovations, and micro-payment rails on Base / x402 ecosystem.
+
+- **Last Updated**: `{current_date_str}`
+- **Active Cycle**: `{current_week_str}`
+- **Database Backend**: [`data/projects.json`](data/projects.json)
 
 ---
 
-## 🏆 Current Top 10 Active Projects
+## 🏆 Current Top 10 Opportunities Leaderboard
 
-| Rank | Project Name | Category | Score | Detailed Card Report |
+| Rank | Project Name | Category | Score | Opportunity Card |
 | :---: | :--- | :--- | :---: | :---: |
 """
 
     for idx, item in enumerate(top_10, start=1):
         snapshot = item["snapshot"]
         card_rel_path = card_file_map.get(item['id'], "#")
-        
-        # 项目名称（如果官方有 URL 则带外链，否则纯文本）
-        name_str = f"[{item['name']}]({item['official_url']})" if item['official_url'] else item['name']
-        
-        # Card 链接指向 reports/ 下的当周详细 markdown
-        card_link = f"[📖 View Opportunity Card]({card_rel_path})"
+        card_link = f"[📖 View Card]({card_rel_path})"
 
-        readme_content += f"| #{idx} | **{name_str}** | `{item['category']}` | **{snapshot['score']}** | {card_link} |\n"
+        readme_content += f"| #{idx} | **{item['name']}** | `{item['category']}` | **{snapshot['score']}** | {card_link} |\n"
 
-    readme_content += "\n---\n\n## 📌 Weekly Summary & Key Dimensions\n\n"
+    readme_content += "\n---\n\n## 📌 Weekly Scout Summaries\n\n"
 
     for idx, item in enumerate(top_10, start=1):
         snapshot = item["snapshot"]
@@ -287,13 +287,19 @@ def render_readme(projects, current_week_str, current_date_str):
 
         dev_m = details.get("developer_code_ecosystem", {}).get("metrics", {})
         onchain_m = details.get("onchain_network_dynamics", {}).get("metrics", {})
+        val_summary = details.get("value_capture_analysis", {}).get("summary", "")
+        path_summary = details.get("actionable_path_for_individuals", {}).get("summary", "")
 
-        readme_content += f"### #{idx} [{item['name']}]({card_rel_path})\n"
-        readme_content += f"- **Category**: {item['category']} | **Score**: {snapshot['score']} / 100\n"
+        readme_content += f"### {idx}. [{item['name']}]({card_rel_path})\n"
+        readme_content += f"- **Category**: {item['category']}\n"
+        readme_content += f"- **Score**: {snapshot['score']} / 100\n"
         readme_content += f"- **Core Value**: {details.get('core_value', '')}\n"
-        readme_content += f"- **Developer Ecosystem**: {dev_m.get('github_stars', 0)} Stars | {dev_m.get('commits_30d', 0)} Commits (30d) — {details.get('developer_code_ecosystem', {}).get('summary', '')}\n"
-        readme_content += f"- **On-Chain Dynamics**: {onchain_m.get('tx_count_7d', 0)} Txs (7d) — {details.get('onchain_network_dynamics', {}).get('summary', '')}\n"
-        readme_content += f"- **Full Analysis**: [📄 Read Full Opportunity Card]({card_rel_path})\n\n---\n\n"
+        readme_content += f"- **Key Evaluation Dimensions**:\n"
+        readme_content += f"  1. **Developer & Code Ecosystem**: {dev_m.get('github_stars', 'N/A')} Stars | {dev_m.get('github_forks', 'N/A')} Forks | {dev_m.get('commits_30d', 'N/A')} Commits (30d) — {details.get('developer_code_ecosystem', {}).get('summary', '')}\n"
+        readme_content += f"  2. **On-Chain & Network Dynamics**: {onchain_m.get('tx_count_7d', 'N/A')} Txs (7d) | {onchain_m.get('active_addresses_7d', 'N/A')} Active Addrs — {details.get('onchain_network_dynamics', {}).get('summary', '')}\n"
+        readme_content += f"  3. **Value Capture Analysis**: {val_summary}\n"
+        readme_content += f"  4. **Actionable Path for Individuals**: {path_summary}\n\n"
+        readme_content += f"👉 **[Read Full Opportunity Card]({card_rel_path})**\n\n---\n\n"
 
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(readme_content)
