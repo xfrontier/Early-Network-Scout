@@ -13,30 +13,19 @@ JSON_PATH = os.path.join(BASE_DIR, "data", "project.json")
 README_PATH = os.path.join(BASE_DIR, "README.md")
 REPORTS_DIR = os.path.join(BASE_DIR, "reports")
 
-# 2. 全局区块链领域的 Gemini 评估 Prompt 模板
+# 2. 精简版 Prompt 模板（为免费层 API 瘦身，保留全量结构与联网搜索能力）
 PROMPT_TEMPLATE = """
-You are an expert Web3 & Blockchain ecosystem analyst. 
-Search the web for the top 10 most promising early-stage blockchain projects (across the entire Web3 ecosystem: L1/L2, AI x Crypto, DeFi, DePIN, RWA, Account Abstraction, etc.) for the current week ({current_week_str}).
+Search the web for the top 10 promising early-stage blockchain/Web3 projects for the current week ({current_week_str}).
 
-CRITICAL IDENTIFIER RULE:
-Here is the list of existing projects in our database:
+Existing projects (REUSE "id" if matching name/domain/github):
 {existing_projects_context}
 
-If a project you find matches any project in the existing list above (by project name, official domain, or GitHub repo), YOU MUST REUSE ITS EXACT "id".
-Only assign a new lowercase hyphenated slug for "id" if it is a completely new project not in the list.
-
-Evaluate each project using a 100-point scale across 4 standardized core dimensions:
-1. Developer & Code Ecosystem (Provide quantitative metrics: github_stars, github_forks, commits_30d, active_contributors, plus a brief summary)
-2. On-Chain & Network Dynamics (Provide quantitative metrics: tx_count_7d, active_addresses_7d, volume_usd_7d, avg_gas_usd, tps_peak, plus a brief summary)
-3. Value Capture Analysis (Provide summary and an array of 3 key value-capturing entities)
-4. Actionable Path for Individuals (Provide summary and an array of 3 actionable pathways for developers/operators/users)
-
-Output MUST strictly be a valid JSON list containing 10 project objects. Each project object must follow this exact schema:
+Return ONLY a strictly valid JSON list of 10 project objects following this exact schema:
 [
   {{
     "id": "proj-unique-slug",
     "name": "Project Name",
-    "category": "Project Category (e.g., DePIN, L2, AI x Crypto)",
+    "category": "L2 / AI x Crypto / DeFi / DePIN / RWA",
     "first_seen": "{current_date_str}",
     "official_url": "https://...",
     "github_repo": "https://...",
@@ -49,7 +38,7 @@ Output MUST strictly be a valid JSON list containing 10 project objects. Each pr
         "is_in_top10": true,
         "status": "active",
         "card_details": {{
-          "core_value": "Brief core value proposition sentence.",
+          "core_value": "Short core value proposition sentence.",
           "developer_code_ecosystem": {{
             "summary": "Brief summary",
             "metrics": {{
@@ -70,11 +59,11 @@ Output MUST strictly be a valid JSON list containing 10 project objects. Each pr
           }},
           "value_capture_analysis": {{
             "summary": "Brief summary",
-            "entities": ["Entity 1 description", "Entity 2 description", "Entity 3 description"]
+            "entities": ["Entity 1", "Entity 2", "Entity 3"]
           }},
           "actionable_path_for_individuals": {{
             "summary": "Brief summary",
-            "paths": ["Path 1 description", "Path 2 description", "Path 3 description"]
+            "paths": ["Path 1", "Path 2", "Path 3"]
           }}
         }}
       }}
@@ -89,10 +78,7 @@ def slugify(text):
     return re.sub(r'[^a-z0-9]+', '-', text).strip('-')
 
 def generate_canonical_id(proj):
-    """
-    确定性 ID 生成算法（兜底逻辑）：
-    优先基于 GitHub 仓库名或官网域名，次选基于规范化的项目名称生成。
-    """
+    """确定性 ID 生成算法（兜底逻辑）"""
     github_url = proj.get("github_repo", "")
     if "github.com/" in github_url:
         path = urlparse(github_url).path.strip("/")
@@ -123,7 +109,7 @@ def save_database(data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_str):
-    """利用 Gemini API + Google Search Grounding 抓取并评估最新 Top 10 项目（支持 429 配额自动冷却重试）"""
+    """利用 Gemini API + Google Search Grounding 抓取并评估最新 Top 10 项目（专为免费 API 优化）"""
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("⚠️ GEMINI_API_KEY missing. Skipping live AI scouting.")
@@ -132,20 +118,16 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
     print("🔑 GEMINI_API_KEY detected. Initializing Gemini Client with Search Grounding...")
     client = genai.Client(api_key=api_key)
     
+    # 仅保留最近 10 个项目的必要信息，大幅节省 Input Tokens
     existing_context = [
-        {
-            "id": p["id"],
-            "name": p["name"],
-            "official_url": p.get("official_url", ""),
-            "github_repo": p.get("github_repo", "")
-        }
-        for p in existing_db
+        {"id": p["id"], "name": p["name"]}
+        for p in existing_db[-10:]
     ]
 
     prompt = PROMPT_TEMPLATE.format(
         current_week_str=current_week_str,
         current_date_str=current_date_str,
-        existing_projects_context=json.dumps(existing_context, ensure_ascii=False, indent=2)
+        existing_projects_context=json.dumps(existing_context, ensure_ascii=False)
     )
 
     max_retries = 3
@@ -170,7 +152,7 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
         except Exception as e:
             err_str = str(e)
             if "429" in err_str and attempt < max_retries:
-                wait_time =  65  # 遇到限流自动等待 15 秒、30 秒冷却 API 配额
+                wait_time = 65
                 print(f"⚠️ Rate limited (429). Waiting {wait_time}s to cooldown API quota... (Attempt {attempt}/{max_retries})")
                 time.sleep(wait_time)
             else:
@@ -180,7 +162,7 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
                 return None
 
 def merge_new_snapshots(existing_db, new_projects, current_week_str):
-    """将 Gemini 最新分析到的 Top 10 快照追加合并至现有的 JSON 数据库中（含多重 ID 强校准机制）"""
+    """合并最新快照至 JSON 数据库"""
     db_map = {proj["id"]: proj for proj in existing_db}
 
     alias_to_id = {}
@@ -226,7 +208,7 @@ def merge_new_snapshots(existing_db, new_projects, current_week_str):
     return list(db_map.values())
 
 def generate_report_cards(top_10_projects, current_week_str, current_date_str):
-    """覆盖生成当周 Top 10 项目的独立 Opportunity Card Markdown 文件"""
+    """覆盖生成 Top 10 项目的 Opportunity Card Markdown 文件"""
     os.makedirs(REPORTS_DIR, exist_ok=True)
     
     for file in os.listdir(REPORTS_DIR):
@@ -311,7 +293,7 @@ def generate_report_cards(top_10_projects, current_week_str, current_date_str):
     return card_file_map
 
 def render_readme(projects, current_week_str, current_date_str):
-    """根据数据库最新快照生成 reports 文件并渲染 README.md"""
+    """根据数据库最新快照渲染 README.md"""
     active_projects = []
     
     for proj in projects:
