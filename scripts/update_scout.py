@@ -170,7 +170,7 @@ def fetch_top_projects_from_gemini(existing_db, current_week_str, current_date_s
         except Exception as e:
             err_str = str(e)
             if "429" in err_str and attempt < max_retries:
-                wait_time = attempt * 15  # 遇到限流自动等待 15 秒、30 秒冷却 API 配额
+                wait_time =  65  # 遇到限流自动等待 15 秒、30 秒冷却 API 配额
                 print(f"⚠️ Rate limited (429). Waiting {wait_time}s to cooldown API quota... (Attempt {attempt}/{max_retries})")
                 time.sleep(wait_time)
             else:
