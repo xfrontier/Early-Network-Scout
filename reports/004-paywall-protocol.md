@@ -2,50 +2,49 @@
 
 - **Project ID**: `proj-paywall-protocol`
 - **Category**: Developer Tools / Content Monetization
-- **First Seen / Updated**: 2026-09-26 (2026-W39)
-- **Weekly Score**: **87 / 100** (Rank #4)
+- **First Seen / Updated**: 2026-09-29 (2026-W40)
+- **Weekly Score**: **89 / 100** (Rank #4)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-A plug-and-play middleware protocol allowing digital publishers, data vendors, and SaaS providers to replace subscription paywalls with instant streaming micro-access passes.
+Decentralized edge gateway enabling instant paywalls on any URL or AI proxy via signed cryptographic receipts.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: 670 stars and 114 forks with ready-to-deploy client packages for Cloudflare Workers, Next.js, and Vercel Edge Runtime.
+- **Summary**: Ready-to-deploy reverse proxy containers and plug-ins for Caddy, Docker, and npm.
 - **Hard Metrics**:
-  - GitHub Stars: `670`
-  - GitHub Forks: `114`
-  - Commits (30d): `32`
-  - Active Contributors: `16`
+  - GitHub Stars: `1250`
+  - GitHub Forks: `110`
+  - Commits (30d): `56`
+  - Active Contributors: `34`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Processed $740K in settled content access fees across 185 publisher nodes with 210,000 unique human and machine payers in W39.
+- **Summary**: Serves millions of verified requests across gated APIs, independent media, and AI inference proxies.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `820000` txs
-  - 7d Active Addresses: `210000`
-  - 7d USD Volume: `$740000.0`
-  - Avg Gas Fee: `$0.0004`
+  - 7d Transaction Volume: `1800000` txs
+  - 7d Active Addresses: `21000`
+  - 7d USD Volume: `$420000.0`
+  - Avg Gas Fee: `$0.001`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Collects a 1.5% developer cut on content checkout volume, paired with a token-staked fee discount tier for publishers.
+Takes a 1% protocol fee on micro-receipt claims processed via relayers and enterprise proxies.
 
 ### Key Value-Capturing Entities:
-1. Paywall Protocol Treasury
-1. Token Stakers
-1. Publishers
+1. Protocol Treasury
+1. Relayer Node Operators
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Embed paywall middleware into edge web services or build zero-knowledge credential verification plugins.
+Deploy pre-configured reverse proxy gateways in front of content APIs.
 
 ### Action Pathways:
-1. Embed the Next.js paywall middleware to monetize traffic from AI crawlers and human readers concurrently.
-1. Build zero-knowledge credential plugins verifying subscription access tiers without leaking client wallet addresses.
+1. Launch Docker reverse proxy container to gate static assets and AI proxies
+1. Monetize web content directly without payment processor accounts or subscriptions

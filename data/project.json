@@ -98,6 +98,50 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W40",
+        "date": "2026-09-29",
+        "rank": 1,
+        "score": 96,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "An open, stateless HTTP protocol standard converting HTTP 402 into an internet-native micropayment checkout mechanism for autonomous AI agents.",
+          "developer_code_ecosystem": {
+            "summary": "Multi-language SDKs across TypeScript, Python, Go, and Rust with native support for major web frameworks.",
+            "metrics": {
+              "github_stars": 3400,
+              "github_forks": 320,
+              "commits_30d": 145,
+              "active_contributors": 180
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "High-velocity settlement on Base utilizing ERC-3009 authorizations with sub-cent gas fees.",
+            "metrics": {
+              "tx_count_7d": 8200000,
+              "active_addresses_7d": 42000,
+              "volume_usd_7d": 2450000.0,
+              "avg_gas_usd": 0.003
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Zero base-layer protocol tax; settlement facilitators monetize via micro-spreads, gas sponsorships, and float yield.",
+            "entities": [
+              "Settlement Facilitators",
+              "Liquidity Providers",
+              "Base Sequencer"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Integrate pay-per-call middleware on APIs or deploy proprietary settlement facilitators.",
+            "paths": [
+              "Integrate @piprail/sdk middleware into web services to monetize REST/gRPC endpoints",
+              "Deploy custom facilitator nodes for low-latency private agent settlement networks"
+            ]
+          }
+        }
       }
     ]
   },
@@ -199,6 +243,49 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W40",
+        "date": "2026-09-29",
+        "rank": 2,
+        "score": 93,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Modular orchestration framework enabling LLMs to autonomously execute on-chain smart contract transactions via Model Context Protocol.",
+          "developer_code_ecosystem": {
+            "summary": "Widespread developer adoption with ready-made integrations for LangChain, CrewAI, and ElizaOS.",
+            "metrics": {
+              "github_stars": 4100,
+              "github_forks": 510,
+              "commits_30d": 98,
+              "active_contributors": 95
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Powers significant programmatic contract deployments and autonomous account interactions across Base.",
+            "metrics": {
+              "tx_count_7d": 1250000,
+              "active_addresses_7d": 45000,
+              "volume_usd_7d": 8700000.0,
+              "avg_gas_usd": 0.004
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Drives execution volume to Base L2 sequencer and feeds into Coinbase Developer Platform enterprise tiers.",
+            "entities": [
+              "Base L2 Network",
+              "Coinbase Developer Platform"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Spin up automated execution agents or expose custom smart contract tools to external LLMs.",
+            "paths": [
+              "Deploy autonomous operational or arbitrage bots using CLI starter templates",
+              "Register custom on-chain contract interactions into the MCP agent tool registry"
+            ]
+          }
+        }
       }
     ]
   },
@@ -297,6 +384,49 @@
             "paths": [
               "Deposit USDC liquidity to high-throughput routing pools to earn steady delta-neutral micro-routing spreads.",
               "Connect off-chain agent clusters to the micro-router contract to prevent wallet dust fragmentation."
+            ]
+          }
+        }
+      },
+      {
+        "week": "2026-W40",
+        "date": "2026-09-29",
+        "rank": 3,
+        "score": 90,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Off-chain aggregation engine bundling sub-cent micro-payments into single-block settlement rollups via Circle CCTP.",
+          "developer_code_ecosystem": {
+            "summary": "Audited smart contracts and lightweight client SDKs for TypeScript and Go.",
+            "metrics": {
+              "github_stars": 820,
+              "github_forks": 45,
+              "commits_30d": 42,
+              "active_contributors": 28
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Processes high-volume aggregated settlement batches, drastically lowering aggregate calldata costs.",
+            "metrics": {
+              "tx_count_7d": 450000,
+              "active_addresses_7d": 12000,
+              "volume_usd_7d": 3500000.0,
+              "avg_gas_usd": 0.002
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Captures a 0.05% fee on net settlement volume passing through liquidity routing pools.",
+            "entities": [
+              "Batch Relayers",
+              "Routing Liquidity Providers"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Deposit liquidity to earn routing fees or integrate client-side settlement hooks.",
+            "paths": [
+              "Provide USDC liquidity into routing pools to capture batching spreads",
+              "Implement batch settlement hooks into agent payment pipelines to cut L2 calldata fees"
             ]
           }
         }
@@ -402,6 +532,49 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W40",
+        "date": "2026-09-29",
+        "rank": 4,
+        "score": 89,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Decentralized edge gateway enabling instant paywalls on any URL or AI proxy via signed cryptographic receipts.",
+          "developer_code_ecosystem": {
+            "summary": "Ready-to-deploy reverse proxy containers and plug-ins for Caddy, Docker, and npm.",
+            "metrics": {
+              "github_stars": 1250,
+              "github_forks": 110,
+              "commits_30d": 56,
+              "active_contributors": 34
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Serves millions of verified requests across gated APIs, independent media, and AI inference proxies.",
+            "metrics": {
+              "tx_count_7d": 1800000,
+              "active_addresses_7d": 21000,
+              "volume_usd_7d": 420000.0,
+              "avg_gas_usd": 0.001
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Takes a 1% protocol fee on micro-receipt claims processed via relayers and enterprise proxies.",
+            "entities": [
+              "Protocol Treasury",
+              "Relayer Node Operators"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Deploy pre-configured reverse proxy gateways in front of content APIs.",
+            "paths": [
+              "Launch Docker reverse proxy container to gate static assets and AI proxies",
+              "Monetize web content directly without payment processor accounts or subscriptions"
+            ]
+          }
+        }
       }
     ]
   },
@@ -500,6 +673,49 @@
             "paths": [
               "Run automated headless crawlers running the zkTLS verifier daemon to fulfill agent data queries.",
               "Source clean training/inference payloads dynamically using automated escrow RFQs."
+            ]
+          }
+        }
+      },
+      {
+        "week": "2026-W40",
+        "date": "2026-09-29",
+        "rank": 5,
+        "score": 87,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Decentralized machine-to-machine exchange for autonomous agents to trade real-time web scrapers and specialized embeddings.",
+          "developer_code_ecosystem": {
+            "summary": "Native integrations with Anthropic tool-use specs, OpenAI function calling, and decentralized storage.",
+            "metrics": {
+              "github_stars": 950,
+              "github_forks": 85,
+              "commits_30d": 64,
+              "active_contributors": 74
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Steadily rising daily automated data requests across registered machine data providers.",
+            "metrics": {
+              "tx_count_7d": 129500,
+              "active_addresses_7d": 4500,
+              "volume_usd_7d": 185000.0,
+              "avg_gas_usd": 0.002
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Registry staking requirements to maintain uptime reputation plus a 0.25% matching fee per query.",
+            "entities": [
+              "Data Agent Providers",
+              "Registry Stakers"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Publish monetized data pipelines as MCP tools to the discovery index.",
+            "paths": [
+              "Wrap scrapers or embeddings into x402-enabled MCP endpoints",
+              "Stake tokens on provider nodes to capture registry match fees"
             ]
           }
         }
@@ -604,6 +820,49 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W40",
+        "date": "2026-09-29",
+        "rank": 6,
+        "score": 86,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Headless smart wallet infrastructure with programmable spending limits and session keys built for autonomous non-human actors.",
+          "developer_code_ecosystem": {
+            "summary": "ERC-4337 and EIP-7702 compatible reference smart accounts integrated into CDP SDKs.",
+            "metrics": {
+              "github_stars": 2200,
+              "github_forks": 190,
+              "commits_30d": 88,
+              "active_contributors": 62
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Broad deployment of autonomous wallets holding substantial stablecoin liquidity across Base and Ethereum L1.",
+            "metrics": {
+              "tx_count_7d": 780000,
+              "active_addresses_7d": 85000,
+              "volume_usd_7d": 6200000.0,
+              "avg_gas_usd": 0.005
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Integrated with enterprise CDP infrastructure with default swap routing through Base DEX pools.",
+            "entities": [
+              "Coinbase Developer Platform",
+              "Base DEX Liquidity Pools"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Initialize headless smart accounts for background bots with granular programmatic spending caps.",
+            "paths": [
+              "Set up headless agent wallets using @coinbase/agentic-wallet SDK",
+              "Define time-bounded session keys and circuit breakers for automated micro-treasuries"
+            ]
+          }
+        }
       }
     ]
   },
@@ -702,6 +961,49 @@
             "paths": [
               "Deploy gated premium casts, pay-to-read newsletters, or interactive mini-games directly in Warpcast feeds.",
               "Fork open frame templates to build native pay-per-prompt AI image generators inside social feeds."
+            ]
+          }
+        }
+      },
+      {
+        "week": "2026-W40",
+        "date": "2026-09-29",
+        "rank": 7,
+        "score": 85,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Social-native micro-commerce framework uniting Farcaster Frames v2 with x402 micropayments for seamless feed unlocks.",
+          "developer_code_ecosystem": {
+            "summary": "Templates and boilerplate kits built for Next.js, Frog, and Neynar developer pipelines.",
+            "metrics": {
+              "github_stars": 1480,
+              "github_forks": 220,
+              "commits_30d": 52,
+              "active_contributors": 41
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Consistently generates micro-payment velocity through in-feed content unlocks and creator tipping.",
+            "metrics": {
+              "tx_count_7d": 245000,
+              "active_addresses_7d": 18500,
+              "volume_usd_7d": 85000.0,
+              "avg_gas_usd": 0.002
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Protocol contracts support optional 2% creator splits redirected into open-source treasury reserves.",
+            "entities": [
+              "Content Creators",
+              "Protocol Treasury"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Deploy monetized dynamic Frames on Warpcast to monetize research and digital content directly.",
+            "paths": [
+              "Fork the standard Frame-402 repository and configure content unlock logic",
+              "Publish paywalled research notes or interactive mini-apps directly into social feeds"
             ]
           }
         }
@@ -806,6 +1108,49 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W40",
+        "date": "2026-09-29",
+        "rank": 8,
+        "score": 84,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "DePIN for AI inference offering GPU/TPU cycles settled per-token and per-request via x402 payment streams.",
+          "developer_code_ecosystem": {
+            "summary": "Rust-based inference daemons supporting vLLM and Ollama model serving runtimes.",
+            "metrics": {
+              "github_stars": 1750,
+              "github_forks": 210,
+              "commits_30d": 71,
+              "active_contributors": 49
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Clusters of independent nodes serving low-latency inference paid per-request in USDC.",
+            "metrics": {
+              "tx_count_7d": 980000,
+              "active_addresses_7d": 8200,
+              "volume_usd_7d": 490000.0,
+              "avg_gas_usd": 0.003
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Hardware providers stake tokens against slashable SLAs and a 1.5% routing spread is taken on settlements.",
+            "entities": [
+              "GPU Node Providers",
+              "Network Routing Facilitators"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Monetize spare GPU hardware or consume decentralized LLM endpoints without credit card billing.",
+            "paths": [
+              "Run a local inference daemon on consumer GPUs to earn real-time USDC micropayments",
+              "Point agent base URLs to decentralized compute nodes for serverless pay-per-token inference"
+            ]
+          }
+        }
       }
     ]
   },
@@ -907,6 +1252,49 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W40",
+        "date": "2026-09-29",
+        "rank": 9,
+        "score": 82,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Automated treasury management sweeping idle agent capital into low-risk lending pools with sub-second payment recalls.",
+          "developer_code_ecosystem": {
+            "summary": "Formally verified ERC-4626 vault wrappers engineered for automated treasury integration.",
+            "metrics": {
+              "github_stars": 670,
+              "github_forks": 58,
+              "commits_30d": 38,
+              "active_contributors": 22
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Maintains $19.5M TVL in agent treasury reserves, producing optimized real yield on Base USDC.",
+            "metrics": {
+              "tx_count_7d": 115000,
+              "active_addresses_7d": 3100,
+              "volume_usd_7d": 1950000.0,
+              "avg_gas_usd": 0.003
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Charges a 10% performance fee on the annualized yield accrued from idle swept capital.",
+            "entities": [
+              "Protocol Governance",
+              "Lending Pool Curators"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Connect autonomous agent wallets to dynamic sweep vaults to eliminate idle cash drag.",
+            "paths": [
+              "Wrap agent operational funds into dynamic sweep contracts for automated yield",
+              "Supply liquidity into base lending corridors to earn lending rewards"
+            ]
+          }
+        }
       }
     ]
   },
@@ -1005,6 +1393,49 @@
             "paths": [
               "Enable the HTTP 402 execution module inside standard Chainlink Functions nodes.",
               "Construct conditional multi-step financial logic that releases collateral only upon receipt of cryptographic 402 verification proofs."
+            ]
+          }
+        }
+      },
+      {
+        "week": "2026-W40",
+        "date": "2026-09-29",
+        "rank": 10,
+        "score": 81,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Cryptographic oracle bridges linking Chainlink Runtime Environment to HTTP 402 machine payments for verifiable off-chain SLA tracking.",
+          "developer_code_ecosystem": {
+            "summary": "Built with the Chainlink CRE Workflow SDK with comprehensive TypeScript and Solidity test coverage.",
+            "metrics": {
+              "github_stars": 1890,
+              "github_forks": 140,
+              "commits_30d": 62,
+              "active_contributors": 51
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Secures hundreds of thousands of cross-chain oracle queries and handles sub-second micro-disputes.",
+            "metrics": {
+              "tx_count_7d": 250000,
+              "active_addresses_7d": 7600,
+              "volume_usd_7d": 1100000.0,
+              "avg_gas_usd": 0.004
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Settles query verification fees in LINK; node operators receive fee shares based on validation accuracy.",
+            "entities": [
+              "Chainlink DON Operators",
+              "CRE Workflow Creators"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Deploy CRE workflow triggers to bind smart contracts to off-chain paid web queries.",
+            "paths": [
+              "Build CRE workflow scripts that trigger on-chain actions upon verified x402 receipts",
+              "Integrate Chainlink Data Streams with automated agent endpoints for verifiable data ingress"
             ]
           }
         }
