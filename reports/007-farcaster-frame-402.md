@@ -2,49 +2,49 @@
 
 - **Project ID**: `proj-farcaster-frame-402`
 - **Category**: SocialFi / Mini-Apps
-- **First Seen / Updated**: 2026-09-29 (2026-W40)
-- **Weekly Score**: **85 / 100** (Rank #7)
+- **First Seen / Updated**: 2026-10-06 (2026-W41)
+- **Weekly Score**: **81 / 100** (Rank #7)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Social-native micro-commerce framework uniting Farcaster Frames v2 with x402 micropayments for seamless feed unlocks.
+Extends Farcaster Frames with HTTP 402 paywall capabilities enabling one-tap micro-USDC unlocks, content tipping, and bot workflows.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Templates and boilerplate kits built for Next.js, Frog, and Neynar developer pipelines.
+- **Summary**: Production-ready Next.js Frame v2 boilerplates preconfigured with EIP-712 typed signature verification.
 - **Hard Metrics**:
-  - GitHub Stars: `1480`
-  - GitHub Forks: `220`
-  - Commits (30d): `52`
-  - Active Contributors: `41`
+  - GitHub Stars: `790`
+  - GitHub Forks: `140`
+  - Commits (30d): `58`
+  - Active Contributors: `26`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Consistently generates micro-payment velocity through in-feed content unlocks and creator tipping.
+- **Summary**: Over 680,000 frame-based micro-transactions across Base and Optimism representing $1.2M weekly social volume.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `245000` txs
-  - 7d Active Addresses: `18500`
-  - 7d USD Volume: `$85000.0`
-  - Avg Gas Fee: `$0.002`
+  - 7d Transaction Volume: `680000` txs
+  - 7d Active Addresses: `31000`
+  - 7d USD Volume: `$1200000.0`
+  - Avg Gas Fee: `$0.0011`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Protocol contracts support optional 2% creator splits redirected into open-source treasury reserves.
+Collects a 0.5% fee on social unlock transactions and manages creator subscription staking pools.
 
 ### Key Value-Capturing Entities:
-1. Content Creators
-1. Protocol Treasury
+1. Protocol staking vaults
+1. Farcaster frame developers
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Deploy monetized dynamic Frames on Warpcast to monetize research and digital content directly.
+Deploy monetized interactive social feeds and gated media within decentralized social channels.
 
 ### Action Pathways:
-1. Fork the standard Frame-402 repository and configure content unlock logic
-1. Publish paywalled research notes or interactive mini-apps directly into social feeds
+1. Clone the Next.js starter repo for Frame v2 with 402 support
+1. Deploy OpenGraph metadata with integrated payment webhook verification

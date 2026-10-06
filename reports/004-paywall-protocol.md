@@ -2,49 +2,49 @@
 
 - **Project ID**: `proj-paywall-protocol`
 - **Category**: Developer Tools / Content Monetization
-- **First Seen / Updated**: 2026-09-29 (2026-W40)
-- **Weekly Score**: **89 / 100** (Rank #4)
+- **First Seen / Updated**: 2026-10-06 (2026-W41)
+- **Weekly Score**: **86 / 100** (Rank #4)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Decentralized edge gateway enabling instant paywalls on any URL or AI proxy via signed cryptographic receipts.
+Edge-native monetization middleware enabling publishers to charge autonomous crawlers, retrieval engines, and LLM query loops per page or per token.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Ready-to-deploy reverse proxy containers and plug-ins for Caddy, Docker, and npm.
+- **Summary**: Edge-first toolkits with production adapters for Cloudflare Workers and Fastly Compute platforms.
 - **Hard Metrics**:
-  - GitHub Stars: `1250`
-  - GitHub Forks: `110`
-  - Commits (30d): `56`
-  - Active Contributors: `34`
+  - GitHub Stars: `910`
+  - GitHub Forks: `115`
+  - Commits (30d): `62`
+  - Active Contributors: `18`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Serves millions of verified requests across gated APIs, independent media, and AI inference proxies.
+- **Summary**: Gated over 14M edge queries across 1,200 domains, distributing more than $450k USDC to technical publishers.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `1800000` txs
-  - 7d Active Addresses: `21000`
-  - 7d USD Volume: `$420000.0`
-  - Avg Gas Fee: `$0.001`
+  - 7d Transaction Volume: `2100000` txs
+  - 7d Active Addresses: `6200`
+  - 7d USD Volume: `$110000.0`
+  - Avg Gas Fee: `$0.0005`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Takes a 1% protocol fee on micro-receipt claims processed via relayers and enterprise proxies.
+Levies a 1% protocol fee on verified authorization proofs handled at distributed edge proxies.
 
 ### Key Value-Capturing Entities:
-1. Protocol Treasury
-1. Relayer Node Operators
+1. Protocol treasury
+1. Participating digital publishers
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Deploy pre-configured reverse proxy gateways in front of content APIs.
+Monetize web content and documentation against AI scrapers via reverse-proxy rules.
 
 ### Action Pathways:
-1. Launch Docker reverse proxy container to gate static assets and AI proxies
-1. Monetize web content directly without payment processor accounts or subscriptions
+1. Add DNS reverse-proxy routing via Cloudflare or Fastly
+1. Configure 402 challenge triggers targeting automated crawler user-agents

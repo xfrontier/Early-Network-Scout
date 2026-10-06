@@ -2,49 +2,49 @@
 
 - **Project ID**: `proj-base-agent-sdk`
 - **Category**: AI Agent Infrastructure
-- **First Seen / Updated**: 2026-09-29 (2026-W40)
+- **First Seen / Updated**: 2026-10-06 (2026-W41)
 - **Weekly Score**: **93 / 100** (Rank #2)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Modular orchestration framework enabling LLMs to autonomously execute on-chain smart contract transactions via Model Context Protocol.
+Modular TypeScript and Python SDK abstracting EVM wallet operations into callable agent tools compatible with LangChain, LlamaIndex, and MCP.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Widespread developer adoption with ready-made integrations for LangChain, CrewAI, and ElizaOS.
+- **Summary**: Robust active community adding automated ERC-20 swap heuristics and session budget gates to core repositories.
 - **Hard Metrics**:
-  - GitHub Stars: `4100`
-  - GitHub Forks: `510`
-  - Commits (30d): `98`
+  - GitHub Stars: `4200`
+  - GitHub Forks: `650`
+  - Commits (30d): `190`
   - Active Contributors: `95`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Powers significant programmatic contract deployments and autonomous account interactions across Base.
+- **Summary**: Over 320,000 smart agent contract interactions generated weekly across Base testnet and mainnet.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `1250000` txs
-  - 7d Active Addresses: `45000`
-  - 7d USD Volume: `$8700000.0`
-  - Avg Gas Fee: `$0.004`
+  - 7d Transaction Volume: `320000` txs
+  - 7d Active Addresses: `14200`
+  - 7d USD Volume: `$850000.0`
+  - Avg Gas Fee: `$0.0012`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Drives execution volume to Base L2 sequencer and feeds into Coinbase Developer Platform enterprise tiers.
+Free and open-source tooling driving on-chain transaction volume, smart wallet creation, and account abstraction adoption on Base.
 
 ### Key Value-Capturing Entities:
-1. Base L2 Network
-1. Coinbase Developer Platform
+1. Base network ecosystem
+1. Smart wallet account providers
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Spin up automated execution agents or expose custom smart contract tools to external LLMs.
+Equip LLM agent runtimes with autonomous wallet actions and programmatic spending limits.
 
 ### Action Pathways:
-1. Deploy autonomous operational or arbitrage bots using CLI starter templates
-1. Register custom on-chain contract interactions into the MCP agent tool registry
+1. Install @coinbase/agentkit into Python/Node agent loops
+1. Configure LangChain or MCP tools with session budget gates
