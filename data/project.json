@@ -186,6 +186,51 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W42",
+        "date": "2026-10-13",
+        "rank": 1,
+        "score": 96,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Operationalizes HTTP 402 Payment Required status code enabling autonomous software and agents to negotiate and settle sub-cent API access in USDC.",
+          "developer_code_ecosystem": {
+            "summary": "Multi-language client/server SDKs across TypeScript, Python, Go, and Rust with edge runtime integrations.",
+            "metrics": {
+              "github_stars": 1850,
+              "github_forks": 340,
+              "commits_30d": 142,
+              "active_contributors": 48
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "High-throughput micro-settlements across Base and Solana with fast confirmation latency.",
+            "metrics": {
+              "tx_count_7d": 17500000,
+              "active_addresses_7d": 94000,
+              "volume_usd_7d": 6050000.0,
+              "avg_gas_usd": 0.0002
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Protocol layer is neutral zero-fee; monetization occurs at the facilitator layer via sponsored gas, fraud checks, and instant authorization.",
+            "entities": [
+              "Facilitators",
+              "Base Sequencer",
+              "API Merchants"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Integrate 402 middleware into edge endpoints and test automated agent micro-payments.",
+            "paths": [
+              "Install middleware via @coinbase/x402-express or edge worker runtimes",
+              "Register payment receipt validators using Coinbase Developer Platform Facilitator",
+              "Deploy mock paywalled endpoints on Base Sepolia testnet"
+            ]
+          }
+        }
       }
     ]
   },
@@ -373,6 +418,51 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W42",
+        "date": "2026-10-13",
+        "rank": 2,
+        "score": 94,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Turnkey framework equipping AI agents with smart accounts, transaction logic, and EVM protocol access.",
+          "developer_code_ecosystem": {
+            "summary": "Massive community adoption with over 90 community action providers integrating major DeFi primitives.",
+            "metrics": {
+              "github_stars": 3200,
+              "github_forks": 620,
+              "commits_30d": 210,
+              "active_contributors": 120
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Large base of deployed agent-controlled smart accounts executing automated actions and daily rebalancing.",
+            "metrics": {
+              "tx_count_7d": 980000,
+              "active_addresses_7d": 185000,
+              "volume_usd_7d": 12600000.0,
+              "avg_gas_usd": 0.0003
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Drives Base sequencer revenues and captures referral cuts and routing margins across integrated protocols.",
+            "entities": [
+              "Base L2",
+              "Action Provider Protocols",
+              "Agent Builders"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Scaffold agent environments and build protocol action providers.",
+            "paths": [
+              "Scaffold an agent runtime via npx @coinbase/agentkit with LangChain or OpenAI SDK",
+              "Configure execution limits using CdpSmartWalletProvider",
+              "Apply for builder grants through Base Ecosystem AI Rounds"
+            ]
+          }
+        }
       }
     ]
   },
@@ -557,6 +647,51 @@
             "paths": [
               "Integrate router contracts on Base Sepolia testnet",
               "Implement EIP-3009 transfer authorizations within Rust/Go backend APIs"
+            ]
+          }
+        }
+      },
+      {
+        "week": "2026-W42",
+        "date": "2026-10-13",
+        "rank": 3,
+        "score": 89,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "State-optimized batch router engineered for high-frequency, sub-cent USDC transfers to reduce gas costs and state bloat.",
+          "developer_code_ecosystem": {
+            "summary": "Foundry-based smart contracts with comprehensive gas benchmarking suites.",
+            "metrics": {
+              "github_stars": 450,
+              "github_forks": 85,
+              "commits_30d": 56,
+              "active_contributors": 18
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Batches hundreds of thousands of daily micro-transfers with minimal overhead relative to standard ERC-20 transfers.",
+            "metrics": {
+              "tx_count_7d": 2450000,
+              "active_addresses_7d": 48000,
+              "volume_usd_7d": 4600000.0,
+              "avg_gas_usd": 0.00018
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Aggregates a 0.05% settlement fee and earns lending yield on transient escrow liquidity buffers.",
+            "entities": [
+              "Batch Aggregators",
+              "Liquidity Providers",
+              "Lending Protocols"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Integrate routing contracts and supply batch routing liquidity.",
+            "paths": [
+              "Import @usdc-router/contracts into treasury workflows",
+              "Run local batching tests against Anvil/Foundry nodes",
+              "Provide early liquidity to earn batch-routing fee shares"
             ]
           }
         }
@@ -748,6 +883,51 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W42",
+        "date": "2026-10-13",
+        "rank": 4,
+        "score": 87,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Content-agnostic decentralized paywall engine connecting browsers and automated scrapers to instant Web3 unlocks.",
+          "developer_code_ecosystem": {
+            "summary": "Client plugins available for modern frontend frameworks, Ghost CMS, and WordPress.",
+            "metrics": {
+              "github_stars": 610,
+              "github_forks": 110,
+              "commits_30d": 64,
+              "active_contributors": 22
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Hundreds of thousands of on-chain unlocks settled in USDC with average unlock sizes between $0.05 and $0.25.",
+            "metrics": {
+              "tx_count_7d": 145000,
+              "active_addresses_7d": 45000,
+              "volume_usd_7d": 210000.0,
+              "avg_gas_usd": 0.00025
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Takes a 1.5% fee on unlocked digital resources, with token staking providing zero-fee tiers.",
+            "entities": [
+              "Content Creators",
+              "Protocol Treasury",
+              "Token Stakers"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Protect content with edge components and establish dynamic user-agent pricing.",
+            "paths": [
+              "Wrap web pages using the <PaywallGuard /> component",
+              "Set dynamic pricing thresholds based on reader user-agent",
+              "Deploy on Base L2 to minimize execution overhead"
+            ]
+          }
+        }
       }
     ]
   },
@@ -932,6 +1112,51 @@
             "paths": [
               "Expose proprietary datasets using OpenAPI 3.1 specifications with x402 headers",
               "Register data feeds in the registry to receive autonomous queries"
+            ]
+          }
+        }
+      },
+      {
+        "week": "2026-W42",
+        "date": "2026-10-13",
+        "rank": 5,
+        "score": 86,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Programmatic data exchange where autonomous AI models purchase vector indices, web scrapes, and context windows via escrow contracts.",
+          "developer_code_ecosystem": {
+            "summary": "Built-in Model Context Protocol (MCP) server modules and client libraries.",
+            "metrics": {
+              "github_stars": 780,
+              "github_forks": 135,
+              "commits_30d": 88,
+              "active_contributors": 29
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Rapid query growth with thousands of autonomous agent consumers and providers transacting monthly.",
+            "metrics": {
+              "tx_count_7d": 260000,
+              "active_addresses_7d": 8200,
+              "volume_usd_7d": 750000.0,
+              "avg_gas_usd": 0.0003
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "A 2.0% protocol rake on delivery escrows backed by slashing mechanics for invalid or corrupted context feeds.",
+            "entities": [
+              "Data Providers",
+              "Autonomous AI Agents",
+              "Protocol DAO"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Operate MCP context provider servers and connect autonomous agent query loops.",
+            "paths": [
+              "Implement an MCP-compliant data provider server via CLI",
+              "Stake testnet collateral to register verified feeds",
+              "Integrate agent hooks to query live data feeds directly"
             ]
           }
         }
@@ -1122,6 +1347,51 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W42",
+        "date": "2026-10-13",
+        "rank": 6,
+        "score": 91,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Server-side, policy-governed passkey/MPC smart wallets engineered specifically for automated daemon processes and background workers.",
+          "developer_code_ecosystem": {
+            "summary": "Provides cloud deployment templates for AWS KMS, GCP KMS, and HashiCorp Vault.",
+            "metrics": {
+              "github_stars": 1420,
+              "github_forks": 220,
+              "commits_30d": 105,
+              "active_contributors": 36
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Extensive fleet of active machine-to-machine smart accounts validating millions of passkey transactions.",
+            "metrics": {
+              "tx_count_7d": 2900000,
+              "active_addresses_7d": 240000,
+              "volume_usd_7d": 8900000.0,
+              "avg_gas_usd": 0.0002
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Freemium API model via CDP with enterprise subscription tiers for high-throughput HSM execution and tight signer SLAs.",
+            "entities": [
+              "Coinbase Developer Platform",
+              "Enterprise Node Operators",
+              "Agent Operators"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Deploy programmatic daemon wallets and configure granular spend limits.",
+            "paths": [
+              "Provision programmatic agent wallets using @coinbase/wallet-sdk-m2m",
+              "Define spend rate limits in the programmatic policy governor",
+              "Deploy headless agents with automated gas sponsorship via Paymasters"
+            ]
+          }
+        }
       }
     ]
   },
@@ -1306,6 +1576,51 @@
             "paths": [
               "Clone the Next.js starter repo for Frame v2 with 402 support",
               "Deploy OpenGraph metadata with integrated payment webhook verification"
+            ]
+          }
+        }
+      },
+      {
+        "week": "2026-W42",
+        "date": "2026-10-13",
+        "rank": 7,
+        "score": 83,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Embeds HTTP 402 micro-transactions into decentralized social feeds to power paywalled content and bot micro-tips.",
+          "developer_code_ecosystem": {
+            "summary": "Starter kits and edge-ready templates built for frog.fm and frames.js frameworks.",
+            "metrics": {
+              "github_stars": 520,
+              "github_forks": 95,
+              "commits_30d": 42,
+              "active_contributors": 14
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Broad engagement across decentralized feeds with low latency sub-300ms frame renders.",
+            "metrics": {
+              "tx_count_7d": 195000,
+              "active_addresses_7d": 46000,
+              "volume_usd_7d": 180000.0,
+              "avg_gas_usd": 0.0002
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Deducts a 1.0% routing fee on all frame settlements and collects revenue splits on sponsored frames.",
+            "entities": [
+              "Social Creators",
+              "Frame Developers",
+              "Protocol Relayers"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Build monetized social frames and deploy serverless settlement endpoints.",
+            "paths": [
+              "Scaffold interactive frames using npx frog create --template x402",
+              "Host frame metadata on serverless edge functions with Base callbacks",
+              "Validate frames using the Warpcast Frame Developer Sandbox"
             ]
           }
         }
@@ -1496,6 +1811,51 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W42",
+        "date": "2026-10-13",
+        "rank": 8,
+        "score": 85,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Decentralized compute marketplace allowing AI agents to autonomously lease fractional GPU/Wasm cycles billed per millisecond.",
+          "developer_code_ecosystem": {
+            "summary": "Open-source Rust node daemons with containerized Docker deployment packages.",
+            "metrics": {
+              "github_stars": 940,
+              "github_forks": 160,
+              "commits_30d": 76,
+              "active_contributors": 26
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "14,000 active compute nodes serving millions of hours of agent compute monthly.",
+            "metrics": {
+              "tx_count_7d": 320000,
+              "active_addresses_7d": 14000,
+              "volume_usd_7d": 520000.0,
+              "avg_gas_usd": 0.00025
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Applies a 3.0% coordination fee on compute hours with node collateral slashing for operational downtime.",
+            "entities": [
+              "Hardware Hosts",
+              "AI Consumers",
+              "Protocol Staking Pools"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Host compute capacity and query decentralized nodes via standard OpenAI endpoints.",
+            "paths": [
+              "Run a background daemon via docker run -d auto-compute-node",
+              "Route agent inference calls through the OpenAI-compatible REST wrapper",
+              "Claim operator rewards in the Base Sepolia test environment"
+            ]
+          }
+        }
       }
     ]
   },
@@ -1683,6 +2043,51 @@
             ]
           }
         }
+      },
+      {
+        "week": "2026-W42",
+        "date": "2026-10-13",
+        "rank": 9,
+        "score": 82,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Continuous streaming micropayment infrastructure deploying in-transit escrow balances into yield-bearing money markets.",
+          "developer_code_ecosystem": {
+            "summary": "Includes comprehensive client hooks, automated subgraphs, and formal verification proofs.",
+            "metrics": {
+              "github_stars": 380,
+              "github_forks": 72,
+              "commits_30d": 38,
+              "active_contributors": 12
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Multi-million dollar TVL supporting tens of thousands of continuous active streams.",
+            "metrics": {
+              "tx_count_7d": 74000,
+              "active_addresses_7d": 32000,
+              "volume_usd_7d": 4200000.0,
+              "avg_gas_usd": 0.0004
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Captures a 10% performance fee on accrued interest generated by escrowed streaming funds.",
+            "entities": [
+              "Stream Issuers",
+              "Stream Recipients",
+              "Money Market Protocols"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Set up continuous payment streams and integrate the streaming SDK.",
+            "paths": [
+              "Deploy continuous payment streams for recurring agent API compute",
+              "Integrate @stream-yield/sdk into payroll and payout operations",
+              "Monitor real-time streaming TVL through Graph endpoints"
+            ]
+          }
+        }
       }
     ]
   },
@@ -1867,6 +2272,51 @@
             "paths": [
               "Deploy Chainlink Functions scripts querying x402-enabled endpoints",
               "Trigger smart contract state transitions verified by web receipts"
+            ]
+          }
+        }
+      },
+      {
+        "week": "2026-W42",
+        "date": "2026-10-13",
+        "rank": 10,
+        "score": 88,
+        "is_in_top10": true,
+        "status": "active",
+        "card_details": {
+          "core_value": "Bridges smart contracts to HTTP 402 paywalls to ingest off-chain authenticated API data via cryptographic proofs.",
+          "developer_code_ecosystem": {
+            "summary": "Provides turnkey Chainlink Functions JavaScript templates and simulation environments.",
+            "metrics": {
+              "github_stars": 860,
+              "github_forks": 140,
+              "commits_30d": 62,
+              "active_contributors": 24
+            }
+          },
+          "onchain_network_dynamics": {
+            "summary": "Executes cross-chain oracle requests paying Web2 endpoints directly with low latency resolution.",
+            "metrics": {
+              "tx_count_7d": 98000,
+              "active_addresses_7d": 12500,
+              "volume_usd_7d": 350000.0,
+              "avg_gas_usd": 0.0006
+            }
+          },
+          "value_capture_analysis": {
+            "summary": "Settlements require LINK and USDC service payments, with margins rewarded to decentralized oracle relayers.",
+            "entities": [
+              "Chainlink Node Operators",
+              "Data Providers",
+              "Calling Smart Contracts"
+            ]
+          },
+          "actionable_path_for_individuals": {
+            "summary": "Incorporate oracle interfaces into smart contracts and simulate payment handshakes.",
+            "paths": [
+              "Inherit the x402Consumer interface in Solidity smart contracts",
+              "Deploy paywalled queries via Chainlink Functions Playground",
+              "Use testnet faucets to simulate autonomous oracle payment handshakes"
             ]
           }
         }

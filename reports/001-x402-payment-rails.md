@@ -2,50 +2,51 @@
 
 - **Project ID**: `proj-x402-payment-rails`
 - **Category**: x402 Infrastructure / Micropayments
-- **First Seen / Updated**: 2026-10-06 (2026-W41)
+- **First Seen / Updated**: 2026-10-13 (2026-W42)
 - **Weekly Score**: **96 / 100** (Rank #1)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Revives the HTTP 402 status code under an open specification allowing endpoints, MCP tools, and APIs to return pay-to instructions fulfilled by agents via USDC.
+Operationalizes HTTP 402 Payment Required status code enabling autonomous software and agents to negotiate and settle sub-cent API access in USDC.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: High commit velocity with over 80 weekly merged pull requests across Coinbase and x402 Foundation repositories focusing on EIP-3009 and facilitator proxies.
+- **Summary**: Multi-language client/server SDKs across TypeScript, Python, Go, and Rust with edge runtime integrations.
 - **Hard Metrics**:
-  - GitHub Stars: `3400`
-  - GitHub Forks: `480`
-  - Commits (30d): `320`
-  - Active Contributors: `85`
+  - GitHub Stars: `1850`
+  - GitHub Forks: `340`
+  - Commits (30d): `142`
+  - Active Contributors: `48`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Over 100M cumulative autonomous agent payments executed across Base L2 with sub-cent gas execution.
+- **Summary**: High-throughput micro-settlements across Base and Solana with fast confirmation latency.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `12500000` txs
-  - 7d Active Addresses: `45000`
-  - 7d USD Volume: `$3500000.0`
-  - Avg Gas Fee: `$0.0008`
+  - 7d Transaction Volume: `17500000` txs
+  - 7d Active Addresses: `94000`
+  - 7d USD Volume: `$6050000.0`
+  - Avg Gas Fee: `$0.0002`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Zero base-layer protocol fees; facilitator nodes capture margin via fast-path routing, batch bundling, and instant liquidity advances.
+Protocol layer is neutral zero-fee; monetization occurs at the facilitator layer via sponsored gas, fraud checks, and instant authorization.
 
 ### Key Value-Capturing Entities:
-1. Facilitator node operators
-1. Base L2 network
-1. USDC liquidity providers
+1. Facilitators
+1. Base Sequencer
+1. API Merchants
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Integrate x402 middleware into serverless or web frameworks to gate routes with 1-line payment requirements.
+Integrate 402 middleware into edge endpoints and test automated agent micro-payments.
 
 ### Action Pathways:
-1. Deploy Express/Hono middleware using @coinbase/x402 or @x402/middleware
-1. Run an x402 facilitator proxy node for routing fees
+1. Install middleware via @coinbase/x402-express or edge worker runtimes
+1. Register payment receipt validators using Coinbase Developer Platform Facilitator
+1. Deploy mock paywalled endpoints on Base Sepolia testnet
