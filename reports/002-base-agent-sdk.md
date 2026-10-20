@@ -2,51 +2,49 @@
 
 - **Project ID**: `proj-base-agent-sdk`
 - **Category**: AI Agent Infrastructure
-- **First Seen / Updated**: 2026-10-13 (2026-W42)
-- **Weekly Score**: **94 / 100** (Rank #2)
+- **First Seen / Updated**: 2026-10-20 (2026-W43)
+- **Weekly Score**: **93 / 100** (Rank #2)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Turnkey framework equipping AI agents with smart accounts, transaction logic, and EVM protocol access.
+Full-stack framework combining CDP tooling and EIP-7702 session keys for autonomous EVM agent execution.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Massive community adoption with over 90 community action providers integrating major DeFi primitives.
+- **Summary**: Extensive developer activity with broad framework integrations into LangChain, CrewAI, and ElizaOS.
 - **Hard Metrics**:
-  - GitHub Stars: `3200`
-  - GitHub Forks: `620`
-  - Commits (30d): `210`
-  - Active Contributors: `120`
+  - GitHub Stars: `4850`
+  - GitHub Forks: `1120`
+  - Commits (30d): `320`
+  - Active Contributors: `160`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Large base of deployed agent-controlled smart accounts executing automated actions and daily rebalancing.
+- **Summary**: Over 6,800 active agent contracts executing 1.45M weekly transactions on Base Mainnet.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `980000` txs
-  - 7d Active Addresses: `185000`
-  - 7d USD Volume: `$12600000.0`
-  - Avg Gas Fee: `$0.0003`
+  - 7d Transaction Volume: `1450000` txs
+  - 7d Active Addresses: `6800`
+  - 7d USD Volume: `$2800000.0`
+  - Avg Gas Fee: `$0.005`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Drives Base sequencer revenues and captures referral cuts and routing margins across integrated protocols.
+Captures value through paymaster routing, gas sponsorship subscriptions, and AMM referral hooks.
 
 ### Key Value-Capturing Entities:
-1. Base L2
-1. Action Provider Protocols
-1. Agent Builders
+1. Paymaster routing fees and session provisioning tiers
+1. Protocol-level referral hooks into Base native AMMs
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Scaffold agent environments and build protocol action providers.
+Spin up autonomous agents and configure safe scoped session allowances.
 
 ### Action Pathways:
-1. Scaffold an agent runtime via npx @coinbase/agentkit with LangChain or OpenAI SDK
-1. Configure execution limits using CdpSmartWalletProvider
-1. Apply for builder grants through Base Ecosystem AI Rounds
+1. Clone template starters via npm create base-agent
+1. Configure scoped spending session permissions using EIP-7702 to prevent wallet-drain risks

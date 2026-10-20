@@ -2,51 +2,49 @@
 
 - **Project ID**: `proj-x402-payment-rails`
 - **Category**: x402 Infrastructure / Micropayments
-- **First Seen / Updated**: 2026-10-13 (2026-W42)
+- **First Seen / Updated**: 2026-10-20 (2026-W43)
 - **Weekly Score**: **96 / 100** (Rank #1)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Operationalizes HTTP 402 Payment Required status code enabling autonomous software and agents to negotiate and settle sub-cent API access in USDC.
+Open, decentralized settlement layer implementing native HTTP 402 client-server handshakes for autonomous AI agent micropayments.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Multi-language client/server SDKs across TypeScript, Python, Go, and Rust with edge runtime integrations.
+- **Summary**: High developer traction across TypeScript, Rust, and Go facilitators with significant weekly SDK downloads.
 - **Hard Metrics**:
-  - GitHub Stars: `1850`
-  - GitHub Forks: `340`
-  - Commits (30d): `142`
-  - Active Contributors: `48`
+  - GitHub Stars: `3420`
+  - GitHub Forks: `410`
+  - Commits (30d): `180`
+  - Active Contributors: `84`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: High-throughput micro-settlements across Base and Solana with fast confirmation latency.
+- **Summary**: Over 2.8M weekly calls across Base, Arbitrum, and Solana with ultra-low batched gas overhead.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `17500000` txs
-  - 7d Active Addresses: `94000`
-  - 7d USD Volume: `$6050000.0`
-  - Avg Gas Fee: `$0.0002`
+  - 7d Transaction Volume: `2800000` txs
+  - 7d Active Addresses: `18400`
+  - 7d USD Volume: `$4100000.0`
+  - Avg Gas Fee: `$0.001`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Protocol layer is neutral zero-fee; monetization occurs at the facilitator layer via sponsored gas, fraud checks, and instant authorization.
+Facilitator fees and staking tiers secure the batch settlement network.
 
 ### Key Value-Capturing Entities:
-1. Facilitators
-1. Base Sequencer
-1. API Merchants
+1. Base facilitator fee (0.05% to 0.15% per settlement batch)
+1. Staking requirement for decentralized settlement facilitators
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Integrate 402 middleware into edge endpoints and test automated agent micro-payments.
+Deploy an x402 gateway or run a settlement facilitator node to capture fees.
 
 ### Action Pathways:
-1. Install middleware via @coinbase/x402-express or edge worker runtimes
-1. Register payment receipt validators using Coinbase Developer Platform Facilitator
-1. Deploy mock paywalled endpoints on Base Sepolia testnet
+1. Deploy an x402 reverse-proxy gateway onto any REST/gRPC API
+1. Run an off-chain facilitator node on Base Sepolia/Mainnet to capture settlement margins
