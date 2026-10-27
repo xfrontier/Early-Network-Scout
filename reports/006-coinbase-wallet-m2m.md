@@ -2,49 +2,49 @@
 
 - **Project ID**: `proj-coinbase-wallet-m2m`
 - **Category**: Wallet / M2M Settlement
-- **First Seen / Updated**: 2026-10-20 (2026-W43)
-- **Weekly Score**: **83 / 100** (Rank #6)
+- **First Seen / Updated**: 2026-10-27 (2026-W44)
+- **Weekly Score**: **86 / 100** (Rank #6)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Machine-to-machine extension for smart wallets featuring sandboxed policy management and deterministic spend caps.
+ERC-4337 smart account infrastructure issuing policy-bound, passkey-delegated sub-wallets to autonomous AI agents.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: High-quality core library maintained under the Coinbase Developer Platform.
+- **Summary**: Over 1,500 stars across Base account repos with end-to-end test coverage for policy-limit enforcement and session keys.
 - **Hard Metrics**:
-  - GitHub Stars: `2750`
-  - GitHub Forks: `340`
-  - Commits (30d): `110`
-  - Active Contributors: `45`
+  - GitHub Stars: `1500`
+  - GitHub Forks: `210`
+  - Commits (30d): `95`
+  - Active Contributors: `38`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: 48,000+ deployed M2M wallets securing $31.2M with 3.8M weekly programmatic signatures.
+- **Summary**: 190,000+ Smart Wallet agent accounts deployed with sub-400ms session validation and daily spend caps between $20–$50 USDC.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `3800000` txs
-  - 7d Active Addresses: `48000`
-  - 7d USD Volume: `$5400000.0`
-  - Avg Gas Fee: `$0.002`
+  - 7d Transaction Volume: `480000` txs
+  - 7d Active Addresses: `62000`
+  - 7d USD Volume: `$920000.0`
+  - Avg Gas Fee: `$0.0007`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Monetized via enterprise policy auditing APIs and CDP infrastructure relayer services.
+Bundled paymaster sponsorship margins, CDP enterprise developer licensing, and reserve balance float yields.
 
 ### Key Value-Capturing Entities:
-1. Enterprise policy auditing API subscriptions
-1. Sponsored relayer execution tier markups
+1. Coinbase Developer Platform
+1. Bundlers and Paymasters
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Provision sandboxed agent wallets and enforce operational daily limits.
+Deploy non-custodial smart accounts with hard budget caps for autonomous scripts.
 
 ### Action Pathways:
-1. Provision programmatic wallets with restricted call permissions through CDP SDK
-1. Deploy session-allowance rules for testing agent automation pipelines
+1. Instantiate agent wallets via agentwallet-sdk with perTxCap limits
+1. Bind ERC-4337 spending policies to prevent unexpected model drain

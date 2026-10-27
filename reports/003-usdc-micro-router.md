@@ -2,49 +2,49 @@
 
 - **Project ID**: `proj-usdc-micro-router`
 - **Category**: DeFi / Liquidity Routing
-- **First Seen / Updated**: 2026-10-20 (2026-W43)
-- **Weekly Score**: **89 / 100** (Rank #3)
+- **First Seen / Updated**: 2026-10-27 (2026-W44)
+- **Weekly Score**: **91 / 100** (Rank #3)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Ultra-low latency off-chain USDC payment channels settled lazily on-chain using EIP-3009 authorizations.
+High-frequency routing engine facilitating programmatic sub-cent USDC transfers across EVM Layer 2s with zero minimum fees.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Standardized REST bindings and robust micro-transfer core protocol tooling.
+- **Summary**: 880+ stars across router repos with OpenAPI specifications, MCP server tool bindings, and 32 active contributors.
 - **Hard Metrics**:
-  - GitHub Stars: `1290`
-  - GitHub Forks: `195`
-  - Commits (30d): `75`
-  - Active Contributors: `24`
+  - GitHub Stars: `880`
+  - GitHub Forks: `120`
+  - Commits (30d): `88`
+  - Active Contributors: `32`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Aggregates over 9.2M micro-payments into 42k weekly on-chain batches backed by $14.8M TVL.
+- **Summary**: Routed >$14M in 30-day volume with a 99.98% execution success rate across Base, Arbitrum, and Polygon.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `42000` txs
-  - 7d Active Addresses: `34000`
-  - 7d USD Volume: `$9200000.0`
-  - Avg Gas Fee: `$0.0008`
+  - 7d Transaction Volume: `890000` txs
+  - 7d Active Addresses: `32000`
+  - 7d USD Volume: `$3260000.0`
+  - Avg Gas Fee: `$0.0002`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Derives revenue from micro-spreads on bundled settlement vouchers and idle margin yield.
+A 0.25% fee is deducted from all routed micropayments and split between paymaster LPs and a buy-and-burn treasury.
 
 ### Key Value-Capturing Entities:
-1. Micro-spread of 0.0001 USDC per bundled state voucher
-1. Treasury interest generated on idle router collateral
+1. Paymaster liquidity providers
+1. Treasury buy-and-burn contract
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Integrate streaming micro-invoices or provide liquidity to settlement pools.
+Route agent micro-transfers via REST endpoints or provide liquidity to earning vaults.
 
 ### Action Pathways:
-1. Integrate client SDK router-client-js to handle streaming micro-invoices
-1. Stake USDC to provide router liquidity pools for instant client channel balancing
+1. Connect AI agent clients to POST /payments via standard MCP servers
+1. Deposit into paymaster routing vaults to earn fee share yields

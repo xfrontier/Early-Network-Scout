@@ -2,49 +2,50 @@
 
 - **Project ID**: `proj-base-agent-sdk`
 - **Category**: AI Agent Infrastructure
-- **First Seen / Updated**: 2026-10-20 (2026-W43)
-- **Weekly Score**: **93 / 100** (Rank #2)
+- **First Seen / Updated**: 2026-10-27 (2026-W44)
+- **Weekly Score**: **94 / 100** (Rank #2)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Full-stack framework combining CDP tooling and EIP-7702 session keys for autonomous EVM agent execution.
+Open-source development toolkit granting autonomous LLMs native on-chain wallet creation, swapping, and x402 payment execution.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Extensive developer activity with broad framework integrations into LangChain, CrewAI, and ElizaOS.
+- **Summary**: More than 4,300 GitHub stars across AgentKit repositories, featuring weekly releases and 130+ community action provider repos.
 - **Hard Metrics**:
-  - GitHub Stars: `4850`
-  - GitHub Forks: `1120`
-  - Commits (30d): `320`
-  - Active Contributors: `160`
+  - GitHub Stars: `4300`
+  - GitHub Forks: `580`
+  - Commits (30d): `210`
+  - Active Contributors: `65`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Over 6,800 active agent contracts executing 1.45M weekly transactions on Base Mainnet.
+- **Summary**: Powers over 45,000 daily autonomous transactions across 14,000 smart contract accounts on Base mainnet.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `1450000` txs
-  - 7d Active Addresses: `6800`
-  - 7d USD Volume: `$2800000.0`
-  - Avg Gas Fee: `$0.005`
+  - 7d Transaction Volume: `315000` txs
+  - 7d Active Addresses: `14000`
+  - 7d USD Volume: `$650000.0`
+  - Avg Gas Fee: `$0.0008`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Captures value through paymaster routing, gas sponsorship subscriptions, and AMM referral hooks.
+Generates DEX routing fees, sequencer transaction gas on Base, and CDP developer platform credit margins.
 
 ### Key Value-Capturing Entities:
-1. Paymaster routing fees and session provisioning tiers
-1. Protocol-level referral hooks into Base native AMMs
+1. Base sequencer
+1. DEX liquidity pools
+1. Coinbase Developer Platform
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Spin up autonomous agents and configure safe scoped session allowances.
+Integrate agent wallets into LLM workflows using standard skills CLIs.
 
 ### Action Pathways:
-1. Clone template starters via npm create base-agent
-1. Configure scoped spending session permissions using EIP-7702 to prevent wallet-drain risks
+1. Install via npx skills add coinbase/agentic-wallet-skills or @coinbase/agentkit
+1. Deploy headless autonomous agents with on-chain spending policy limits

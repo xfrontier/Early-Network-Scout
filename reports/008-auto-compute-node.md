@@ -2,49 +2,50 @@
 
 - **Project ID**: `proj-auto-compute-node`
 - **Category**: DePIN / Distributed Compute
-- **First Seen / Updated**: 2026-10-20 (2026-W43)
-- **Weekly Score**: **79 / 100** (Rank #8)
+- **First Seen / Updated**: 2026-10-27 (2026-W44)
+- **Weekly Score**: **82 / 100** (Rank #8)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Decentralized GPU compute network where nodes accept inference workloads paid via real-time micro-streams and x402 headers.
+Decentralized compute daemon allowing GPU/CPU providers to deliver AI inference with real-time x402 per-token micro-settlements.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Dockerized daemon supporting vLLM and Ollama instances for decentralized inference.
+- **Summary**: 750+ stars across node runner repositories supporting CUDA 12+, Docker runtimes, and local Ollama/vLLM backends.
 - **Hard Metrics**:
-  - GitHub Stars: `2150`
-  - GitHub Forks: `280`
-  - Commits (30d): `94`
-  - Active Contributors: `52`
+  - GitHub Stars: `750`
+  - GitHub Forks: `110`
+  - Commits (30d): `64`
+  - Active Contributors: `28`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: 1,850 GPU workers completed 1.1M inference tasks generating $890k in operator payouts.
+- **Summary**: 1,900+ active hardware nodes serving over 2.6M compute-hours and over $50,000 in daily streaming stablecoin payouts.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `1100000` txs
-  - 7d Active Addresses: `1850`
-  - 7d USD Volume: `$890000.0`
-  - Avg Gas Fee: `$0.0025`
+  - 7d Transaction Volume: `260000` txs
+  - 7d Active Addresses: `2200`
+  - 7d USD Volume: `$375000.0`
+  - Avg Gas Fee: `$0.0005`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Marketplace orchestration take rate and operator node collateral requirements.
+Deducts a 1.5% network coordination fee from compute revenues; enforces slashable validator staking bonds.
 
 ### Key Value-Capturing Entities:
-1. 3% marketplace orchestration commission on compute settlements
-1. Slashable operator node staking pools
+1. Hardware node runners
+1. Protocol coordinator network
+1. Validator staking pool
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Connect local or enterprise GPUs to earn automated micro-settlements.
+Supply idle GPU hardware to earn streaming USDC inference revenue.
 
 ### Action Pathways:
-1. Join the compute mesh by running the CLI worker container (autocompute-runner)
-1. Set accepted pricing thresholds per million tokens
+1. Launch a node runner daemon using the official Docker container
+1. Stake the required validator bond and list models on the x402 Bazaar registry
