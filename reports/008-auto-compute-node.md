@@ -2,50 +2,50 @@
 
 - **Project ID**: `proj-auto-compute-node`
 - **Category**: DePIN / Distributed Compute
-- **First Seen / Updated**: 2026-10-27 (2026-W44)
-- **Weekly Score**: **82 / 100** (Rank #8)
+- **First Seen / Updated**: 2026-11-03 (2026-W45)
+- **Weekly Score**: **78 / 100** (Rank #8)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Decentralized compute daemon allowing GPU/CPU providers to deliver AI inference with real-time x402 per-token micro-settlements.
+Decentralized GPU/CPU bare-metal compute marketplace where autonomous workloads buy container runtimes and inference time via continuous 402-metered streaming.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: 750+ stars across node runner repositories supporting CUDA 12+, Docker runtimes, and local Ollama/vLLM backends.
+- **Summary**: Active open-source daemon codebase with docker runner plugins for automated bare-metal leasing.
 - **Hard Metrics**:
-  - GitHub Stars: `750`
-  - GitHub Forks: `110`
-  - Commits (30d): `64`
-  - Active Contributors: `28`
+  - GitHub Stars: `2410`
+  - GitHub Forks: `315`
+  - Commits (30d): `272`
+  - Active Contributors: `34`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: 1,900+ active hardware nodes serving over 2.6M compute-hours and over $50,000 in daily streaming stablecoin payouts.
+- **Summary**: More than 1,000 active GPU clusters delivering hundreds of thousands of node-hours with staked slashing pools.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `260000` txs
-  - 7d Active Addresses: `2200`
-  - 7d USD Volume: `$375000.0`
-  - Avg Gas Fee: `$0.0005`
+  - 7d Transaction Volume: `142000` txs
+  - 7d Active Addresses: `1180`
+  - 7d USD Volume: `$710000.0`
+  - Avg Gas Fee: `$0.0009`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Deducts a 1.5% network coordination fee from compute revenues; enforces slashable validator staking bonds.
+A 2.5% protocol fee on streaming compute payments, plus validator slashing collateral for downtime or faulty inference.
 
 ### Key Value-Capturing Entities:
-1. Hardware node runners
-1. Protocol coordinator network
-1. Validator staking pool
+1. Compute node operators
+1. Network security slashing pools
+1. Protocol DAO
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Supply idle GPU hardware to earn streaming USDC inference revenue.
+Monetize spare machine hardware by provisioning it as an autonomous compute worker.
 
 ### Action Pathways:
-1. Launch a node runner daemon using the official Docker container
-1. Stake the required validator bond and list models on the x402 Bazaar registry
+1. Install autocompute-daemon CLI on GPU-equipped servers
+1. Earn continuous stablecoin stream yields by fulfilling agent compute demands

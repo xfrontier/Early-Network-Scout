@@ -2,49 +2,49 @@
 
 - **Project ID**: `proj-paywall-protocol`
 - **Category**: Developer Tools / Content Monetization
-- **First Seen / Updated**: 2026-10-27 (2026-W44)
-- **Weekly Score**: **89 / 100** (Rank #4)
+- **First Seen / Updated**: 2026-11-03 (2026-W45)
+- **Weekly Score**: **86 / 100** (Rank #4)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Decentralized content-gating infrastructure providing real-time pay-per-read micro-settlement and AI crawler billing.
+Turnkey headless paywall gateway converting web assets, REST/GraphQL endpoints, and dynamic content into metered HTTP 402 micro-tollbooths.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Over 650 stars across open-source CMS extensions including WordPress plugins, Express/Fastify modules, and TYPO3 hooks.
+- **Summary**: Strong collection of plugins covering edge runtimes like Cloudflare Workers, Next.js, and Express.
 - **Hard Metrics**:
-  - GitHub Stars: `650`
-  - GitHub Forks: `75`
-  - Commits (30d): `54`
-  - Active Contributors: `25`
+  - GitHub Stars: `2150`
+  - GitHub Forks: `330`
+  - Commits (30d): `204`
+  - Active Contributors: `35`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Processed over 1.4M on-chain content unlocks across 80,000 daily paywall prompts, averaging $0.005–$0.05 per unlock.
+- **Summary**: Over 12,000 active domains generating steady micro-receipt payment flows on Base and Polygon.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `210000` txs
-  - 7d Active Addresses: `19500`
-  - 7d USD Volume: `$42000.0`
-  - Avg Gas Fee: `$0.0004`
+  - 7d Transaction Volume: `1850000` txs
+  - 7d Active Addresses: `12400`
+  - 7d USD Volume: `$420000.0`
+  - Avg Gas Fee: `$0.0005`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Levies a 0.5% protocol take-rate on unlocked content payouts alongside tier pass staking discounts.
+A 1% protocol fee on paywall receipts combined with enterprise SaaS licensing for zero-latency edge caching.
 
 ### Key Value-Capturing Entities:
-1. Protocol DAO treasury
-1. Publishers and content creators
+1. Protocol foundation
+1. Edge relay hosts
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Gaze websites and blogs to earn USDC from readers and scraper bots.
+Protect content and API routes from automated crawlers while extracting programmatic revenue.
 
 ### Action Pathways:
-1. Install the x402-Pay plugin on WordPress or import @bankofai/x402-paywall in Next.js
-1. Set automated pricing rules to charge LLM scraping agents per page fetch
+1. Attach @paywall-protocol/cf-worker to Cloudflare or Vercel edge routes
+1. Monetize web scraping traffic with cryptographic agent paywalls

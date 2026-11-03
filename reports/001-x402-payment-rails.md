@@ -2,50 +2,50 @@
 
 - **Project ID**: `proj-x402-payment-rails`
 - **Category**: x402 Infrastructure / Micropayments
-- **First Seen / Updated**: 2026-10-27 (2026-W44)
+- **First Seen / Updated**: 2026-11-03 (2026-W45)
 - **Weekly Score**: **96 / 100** (Rank #1)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Native HTTP-layer payment protocol reviving HTTP 402 to turn APIs into sub-cent, pay-per-use resources for autonomous agents.
+An open HTTP-native micropayment standard reviving HTTP 402 for autonomous agent-to-API settlements via USDC without human accounts or credit card intermediaries.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Over 2,100 stars across specification repos with multi-language client SDKs and middleware for Express, Rails, and Next.js.
+- **Summary**: Rapidly adopted open standard co-developed across Linux Foundation, Base, and Cloudflare contributors.
 - **Hard Metrics**:
-  - GitHub Stars: `2100`
-  - GitHub Forks: `290`
-  - Commits (30d): `142`
-  - Active Contributors: `50`
+  - GitHub Stars: `4120`
+  - GitHub Forks: `680`
+  - Commits (30d): `568`
+  - Active Contributors: `88`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Settled over 180M cumulative micropayment transactions with sub-250ms optimistic latency and $52M total volume.
+- **Summary**: High-velocity settlement activity spanning Base L2 and Solana with tens of thousands of active machine wallets.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `4200000` txs
-  - 7d Active Addresses: `85000`
-  - 7d USD Volume: `$1800000.0`
-  - Avg Gas Fee: `$0.0005`
+  - 7d Transaction Volume: `8200000` txs
+  - 7d Active Addresses: `38200`
+  - 7d USD Volume: `$14800000.0`
+  - Avg Gas Fee: `$0.0003`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Collects 0.10%–0.25% protocol take-rates per settlement, L2 batch gas arbitrage, and enterprise facilitator SLA fees.
+Base layer is zero-tax; monetization flows through third-party facilitator staking, latency-optimized settlement relays, and enterprise SLA routing.
 
 ### Key Value-Capturing Entities:
-1. Facilitator nodes
-1. Protocol treasury
-1. L2 batch sequencers
+1. Settlement relay operators
+1. Facilitator stakers
+1. Enterprise gateway providers
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Monetize APIs by mounting npm or ruby middleware with x402 headers.
+Integrate standard middleware into server endpoints to monetize API routes with agent micro-tollbooths.
 
 ### Action Pathways:
-1. Mount middleware via npm i @x402/express or gem 'x402-rails'
-1. Add x402_paywall header to route controllers to charge AI agents per request
+1. Install @x402/middleware in Node.js or Python API gateways
+1. Deploy a payment receiver with Base Sepolia testnet USDC to test agent monetization

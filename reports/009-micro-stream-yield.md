@@ -2,50 +2,49 @@
 
 - **Project ID**: `proj-micro-stream-yield`
 - **Category**: DeFi / Yield Aggregator
-- **First Seen / Updated**: 2026-10-27 (2026-W44)
-- **Weekly Score**: **81 / 100** (Rank #9)
+- **First Seen / Updated**: 2026-11-03 (2026-W45)
+- **Weekly Score**: **76 / 100** (Rank #9)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Continuous automated treasury optimization sweeping idle agent balances into yield vaults with zero-latency liquidity buffers.
+Automated continuous-liquidity treasury protocol routing idle stablecoin micro-balances accrued by autonomous agents into RWA and DeFi yields with sub-block liquidity access.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: 580+ stars across ERC-4626 vault adapters and Foundry test suites, including formally verified emergency sweeps.
+- **Summary**: Formally verified smart contracts optimizing fast yield accrual and sub-second de-allocation.
 - **Hard Metrics**:
-  - GitHub Stars: `580`
-  - GitHub Forks: `70`
-  - Commits (30d): `48`
-  - Active Contributors: `19`
+  - GitHub Stars: `1120`
+  - GitHub Forks: `160`
+  - Commits (30d): `112`
+  - Active Contributors: `18`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Manages $26.5M TVL across Base and Arbitrum, generating 4.2%–5.1% APY for over 15,000 autonomous agent treasuries.
+- **Summary**: Tens of millions in TVL from machine treasury accounts achieving near 5% APY without locking capital.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `84000` txs
-  - 7d Active Addresses: `15200`
-  - 7d USD Volume: `$2100000.0`
-  - Avg Gas Fee: `$0.0009`
+  - 7d Transaction Volume: `85000` txs
+  - 7d Active Addresses: `2400`
+  - 7d USD Volume: `$1850000.0`
+  - Avg Gas Fee: `$0.0011`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Charges an 8% protocol performance fee on generated yield, supplemented by flash-unbundling exit fees.
+A 10% performance fee levied on net interest earned across idle agent treasury holdings.
 
 ### Key Value-Capturing Entities:
-1. Yield vault smart contracts
-1. Underlying lending protocols (Aave, Morpho)
-1. Governance treasury
+1. Vault yield strategists
+1. Protocol treasury
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Optimize returns on idle agent balances without locking operational cash flow.
+Optimize yield on working capital reserves held by automated on-chain bots and payment services.
 
 ### Action Pathways:
-1. Integrate the ERC-4626 vault adapter into agent wallet runtimes
-1. Set threshold triggers to sweep operating balances above reserve minimums
+1. Wrap agent operational wallets into MicroYieldVault.sol
+1. Maintain immediate spendability while earning baseline risk-free yields between cycles

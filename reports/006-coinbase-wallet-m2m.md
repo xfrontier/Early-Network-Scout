@@ -2,49 +2,49 @@
 
 - **Project ID**: `proj-coinbase-wallet-m2m`
 - **Category**: Wallet / M2M Settlement
-- **First Seen / Updated**: 2026-10-27 (2026-W44)
-- **Weekly Score**: **86 / 100** (Rank #6)
+- **First Seen / Updated**: 2026-11-03 (2026-W45)
+- **Weekly Score**: **82 / 100** (Rank #6)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-ERC-4337 smart account infrastructure issuing policy-bound, passkey-delegated sub-wallets to autonomous AI agents.
+Cryptographic session key infrastructure allowing physical IoT devices and autonomous workers to act as self-governing economic agents with bounded spend controls.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Over 1,500 stars across Base account repos with end-to-end test coverage for policy-limit enforcement and session keys.
+- **Summary**: Native extension of Coinbase Embedded Wallet and Passkey SDK with strong documentation and sample integrations.
 - **Hard Metrics**:
-  - GitHub Stars: `1500`
-  - GitHub Forks: `210`
-  - Commits (30d): `95`
-  - Active Contributors: `38`
+  - GitHub Stars: `2780`
+  - GitHub Forks: `410`
+  - Commits (30d): `252`
+  - Active Contributors: `50`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: 190,000+ Smart Wallet agent accounts deployed with sub-400ms session validation and daily spend caps between $20–$50 USDC.
+- **Summary**: Millions of automated signing events weekly with exceptionally low transaction failure rates.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `480000` txs
-  - 7d Active Addresses: `62000`
-  - 7d USD Volume: `$920000.0`
-  - Avg Gas Fee: `$0.0007`
+  - 7d Transaction Volume: `5600000` txs
+  - 7d Active Addresses: `94000`
+  - 7d USD Volume: `$5200000.0`
+  - Avg Gas Fee: `$0.0004`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Bundled paymaster sponsorship margins, CDP enterprise developer licensing, and reserve balance float yields.
+Tiered enterprise API fees, gas sponsorship spreads, and compliance audit trail provisioning.
 
 ### Key Value-Capturing Entities:
-1. Coinbase Developer Platform
-1. Bundlers and Paymasters
+1. Coinbase CDP
+1. Paymaster relayers
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Deploy non-custodial smart accounts with hard budget caps for autonomous scripts.
+Equip background server workers with bounded ERC-4337 session keys for unattended operations.
 
 ### Action Pathways:
-1. Instantiate agent wallets via agentwallet-sdk with perTxCap limits
-1. Bind ERC-4337 spending policies to prevent unexpected model drain
+1. Configure @coinbase/wallet-m2m in an automated backend script
+1. Set session rules with spending caps (e.g. 5 USDC/day) without repeated manual auth
