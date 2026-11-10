@@ -2,49 +2,50 @@
 
 - **Project ID**: `proj-paywall-protocol`
 - **Category**: Developer Tools / Content Monetization
-- **First Seen / Updated**: 2026-11-03 (2026-W45)
-- **Weekly Score**: **86 / 100** (Rank #4)
+- **First Seen / Updated**: 2026-11-10 (2026-W46)
+- **Weekly Score**: **87 / 100** (Rank #4)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Turnkey headless paywall gateway converting web assets, REST/GraphQL endpoints, and dynamic content into metered HTTP 402 micro-tollbooths.
+Drop-in decentralized gating layer that transforms static Web2 API gateways, cloud functions, and SaaS assets into crypto-metered paywalls enforcing HTTP 402 checks.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Strong collection of plugins covering edge runtimes like Cloudflare Workers, Next.js, and Express.
+- **Summary**: Open-source reverse-proxy middleware adapters for Nginx, Envoy, and Cloudflare Workers implemented in Go and TypeScript.
 - **Hard Metrics**:
-  - GitHub Stars: `2150`
-  - GitHub Forks: `330`
-  - Commits (30d): `204`
-  - Active Contributors: `35`
+  - GitHub Stars: `780`
+  - GitHub Forks: `110`
+  - Commits (30d): `52`
+  - Active Contributors: `24`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Over 12,000 active domains generating steady micro-receipt payment flows on Base and Polygon.
+- **Summary**: Secures hundreds of live registered domains with millions of paywall verifications completed at sub-180ms latency.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `1850000` txs
-  - 7d Active Addresses: `12400`
+  - 7d Transaction Volume: `1400000` txs
+  - 7d Active Addresses: `21000`
   - 7d USD Volume: `$420000.0`
-  - Avg Gas Fee: `$0.0005`
+  - Avg Gas Fee: `$0.0003`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-A 1% protocol fee on paywall receipts combined with enterprise SaaS licensing for zero-latency edge caching.
+Levies a 1% fee on settled programmatic revenues or collects fixed relay fees from high-throughput enterprise proxies.
 
 ### Key Value-Capturing Entities:
-1. Protocol foundation
-1. Edge relay hosts
+1. Protocol DAO treasury
+1. Edge reverse-proxy operators
+1. Web2 API monetizers
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Protect content and API routes from automated crawlers while extracting programmatic revenue.
+Deploy proxy containers to monetize existing web APIs without custom authentication code.
 
 ### Action Pathways:
-1. Attach @paywall-protocol/cf-worker to Cloudflare or Vercel edge routes
-1. Monetize web scraping traffic with cryptographic agent paywalls
+1. Deploy the reverse-proxy container image via Docker or Vercel Edge middleware
+1. Configure recipient Base wallet address and rate-limiting bucket rules

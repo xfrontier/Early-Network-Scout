@@ -2,50 +2,50 @@
 
 - **Project ID**: `proj-usdc-micro-router`
 - **Category**: DeFi / Liquidity Routing
-- **First Seen / Updated**: 2026-11-03 (2026-W45)
+- **First Seen / Updated**: 2026-11-10 (2026-W46)
 - **Weekly Score**: **89 / 100** (Rank #3)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-High-throughput batching and routing layer tailored for sub-cent USDC machine transactions using Permit2 gasless authorizations and transient storage.
+High-throughput intent router and liquidity aggregator batching and netting sub-cent USDC payments across heterogeneous AI agent interactions.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Core smart contract repositories and a high-performance Rust transaction bundler maintained by specialized DeFi engineers.
+- **Summary**: Core MCP server and routing SDK integrated into over 80 Model Context Protocol tool catalogs with active developer contributions.
 - **Hard Metrics**:
-  - GitHub Stars: `1340`
-  - GitHub Forks: `215`
-  - Commits (30d): `148`
-  - Active Contributors: `24`
+  - GitHub Stars: `320`
+  - GitHub Forks: `45`
+  - Commits (30d): `64`
+  - Active Contributors: `18`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Processes millions of micro-settlements across batched rollups, delivering over 90% gas reduction versus standard ERC-20 transfers.
+- **Summary**: Handles millions of micro-hops weekly while cutting agent gas overhead by 78% using EIP-3009 state-channel drawdown tabs.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `3100000` txs
-  - 7d Active Addresses: `14500`
-  - 7d USD Volume: `$55800.0`
+  - 7d Transaction Volume: `2200000` txs
+  - 7d Active Addresses: `34000`
+  - 7d USD Volume: `$1850000.0`
   - Avg Gas Fee: `$0.0002`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Captures a 0.05% routing spread on batched settlements over $1.00 cumulative threshold alongside bundler MEV rebalancing.
+Extracts fractional liquidity fees on aggregated netting settlement batches and cross-L2 liquidity bridging.
 
 ### Key Value-Capturing Entities:
-1. Bundler nodes
-1. Routing pool liquidity providers
-1. Protocol treasury
+1. Batch routing keepers
+1. Netting pool liquidity providers
+1. Aggregator protocol treasury
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Participate as an aggregation node solver to earn batching fees from agent transactions.
+Connect the router directly to desktop AI environments and configure pre-funded agent tabs.
 
 ### Action Pathways:
-1. Deploy the Rust bundler node on testnet
-1. Aggregate agent transaction receipts to earn solver rewards
+1. Add the router MCP server configuration to Claude Desktop or Cursor settings
+1. Configure pre-funded agent allowance tabs to stream sub-cent payments

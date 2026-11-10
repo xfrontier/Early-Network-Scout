@@ -2,50 +2,50 @@
 
 - **Project ID**: `proj-auto-compute-node`
 - **Category**: DePIN / Distributed Compute
-- **First Seen / Updated**: 2026-11-03 (2026-W45)
-- **Weekly Score**: **78 / 100** (Rank #8)
+- **First Seen / Updated**: 2026-11-10 (2026-W46)
+- **Weekly Score**: **80 / 100** (Rank #8)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Decentralized GPU/CPU bare-metal compute marketplace where autonomous workloads buy container runtimes and inference time via continuous 402-metered streaming.
+Decentralized compute and inference network where AI workers accept real-time, pay-per-token or pay-per-second x402 streaming micro-settlements.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Active open-source daemon codebase with docker runner plugins for automated bare-metal leasing.
+- **Summary**: Lightweight node daemons with native integration bridges into Ollama, vLLM, and standardized Claude/OpenAI API wrappers.
 - **Hard Metrics**:
-  - GitHub Stars: `2410`
-  - GitHub Forks: `315`
-  - Commits (30d): `272`
-  - Active Contributors: `34`
+  - GitHub Stars: `510`
+  - GitHub Forks: `72`
+  - Commits (30d): `47`
+  - Active Contributors: `16`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: More than 1,000 active GPU clusters delivering hundreds of thousands of node-hours with staked slashing pools.
+- **Summary**: Over 2,100 active compute nodes worldwide settling millions of inference steps via programmatic USDC micropayments.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `142000` txs
-  - 7d Active Addresses: `1180`
-  - 7d USD Volume: `$710000.0`
-  - Avg Gas Fee: `$0.0009`
+  - 7d Transaction Volume: `950000` txs
+  - 7d Active Addresses: `6400`
+  - 7d USD Volume: `$310000.0`
+  - Avg Gas Fee: `$0.0002`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-A 2.5% protocol fee on streaming compute payments, plus validator slashing collateral for downtime or faulty inference.
+Charges a 1.5% node spread on compute matchmaking and enforces slashing conditions on workers failing execution proofs.
 
 ### Key Value-Capturing Entities:
-1. Compute node operators
-1. Network security slashing pools
-1. Protocol DAO
+1. Independent GPU/CPU node operators
+1. Proof verification relayers
+1. Compute coordination layer
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Monetize spare machine hardware by provisioning it as an autonomous compute worker.
+Monetize spare compute by deploying an inference daemon on local or cloud hardware.
 
 ### Action Pathways:
-1. Install autocompute-daemon CLI on GPU-equipped servers
-1. Earn continuous stablecoin stream yields by fulfilling agent compute demands
+1. Spin up a lightweight node daemon with an attached GPU/CPU worker
+1. Serve LLM inference requests to earn immediate programmatic USDC settlement

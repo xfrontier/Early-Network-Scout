@@ -2,8 +2,8 @@
 
 Weekly automated scouting & evaluation system for identifying high-potential early network opportunities, protocol innovations, and micro-payment rails on Base / x402 ecosystem.
 
-- **Last Updated**: `2026-11-03`
-- **Active Cycle**: `2026-W45`
+- **Last Updated**: `2026-11-10`
+- **Active Cycle**: `2026-W46`
 - **Database Backend**: [`data/project.json`](data/project.json)
 
 ---
@@ -13,15 +13,15 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 | Rank | Project Name | Category | Score | Opportunity Card |
 | :---: | :--- | :--- | :---: | :---: |
 | #1 | **x402 Payment Rails** | `x402 Infrastructure / Micropayments` | **96** | [📖 View Card](reports/001-x402-payment-rails.md) |
-| #2 | **Base Agent SDK** | `AI Agent Infrastructure` | **93** | [📖 View Card](reports/002-base-agent-sdk.md) |
+| #2 | **Base Agent SDK** | `AI Agent Infrastructure` | **94** | [📖 View Card](reports/002-base-agent-sdk.md) |
 | #3 | **USDC Micro Router** | `DeFi / Liquidity Routing` | **89** | [📖 View Card](reports/003-usdc-micro-router.md) |
-| #4 | **Paywall Protocol** | `Developer Tools / Content Monetization` | **86** | [📖 View Card](reports/004-paywall-protocol.md) |
-| #5 | **Agentic Data Market** | `AI Data Marketplace` | **84** | [📖 View Card](reports/005-agentic-data-market.md) |
-| #6 | **Coinbase Wallet M2M** | `Wallet / M2M Settlement` | **82** | [📖 View Card](reports/006-coinbase-wallet-m2m.md) |
-| #7 | **Farcaster Frame 402** | `SocialFi / Mini-Apps` | **80** | [📖 View Card](reports/007-farcaster-frame-402.md) |
-| #8 | **Auto Compute Node** | `DePIN / Distributed Compute` | **78** | [📖 View Card](reports/008-auto-compute-node.md) |
-| #9 | **Micro Stream Yield** | `DeFi / Yield Aggregator` | **76** | [📖 View Card](reports/009-micro-stream-yield.md) |
-| #10 | **Chainlink 402 Oracle** | `Oracle / Data Feeds` | **75** | [📖 View Card](reports/010-chainlink-402-oracle.md) |
+| #4 | **Paywall Protocol** | `Developer Tools / Content Monetization` | **87** | [📖 View Card](reports/004-paywall-protocol.md) |
+| #5 | **Agentic Data Market** | `AI Data Marketplace` | **85** | [📖 View Card](reports/005-agentic-data-market.md) |
+| #6 | **Coinbase Wallet M2M** | `Wallet / M2M Settlement` | **84** | [📖 View Card](reports/006-coinbase-wallet-m2m.md) |
+| #7 | **Farcaster Frame 402** | `SocialFi / Mini-Apps` | **81** | [📖 View Card](reports/007-farcaster-frame-402.md) |
+| #8 | **Auto Compute Node** | `DePIN / Distributed Compute` | **80** | [📖 View Card](reports/008-auto-compute-node.md) |
+| #9 | **Micro Stream Yield** | `DeFi / Yield Aggregator` | **78** | [📖 View Card](reports/009-micro-stream-yield.md) |
+| #10 | **Chainlink 402 Oracle** | `Oracle / Data Feeds` | **77** | [📖 View Card](reports/010-chainlink-402-oracle.md) |
 
 ---
 
@@ -30,12 +30,12 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 ### 1. [x402 Payment Rails](reports/001-x402-payment-rails.md)
 - **Category**: x402 Infrastructure / Micropayments
 - **Score**: 96 / 100
-- **Core Value**: An open HTTP-native micropayment standard reviving HTTP 402 for autonomous agent-to-API settlements via USDC without human accounts or credit card intermediaries.
+- **Core Value**: An open, internet-native protocol operationalizing HTTP 402 Payment Required to enable autonomous AI agents to negotiate and settle API calls via micro-transactions without human signup.
 - **Key Evaluation Dimensions**:
-  1. **Developer & Code Ecosystem**: 4120 Stars | 680 Forks | 568 Commits (30d) — Rapidly adopted open standard co-developed across Linux Foundation, Base, and Cloudflare contributors.
-  2. **On-Chain & Network Dynamics**: 8200000 Txs (7d) | 38200 Active Addrs — High-velocity settlement activity spanning Base L2 and Solana with tens of thousands of active machine wallets.
-  3. **Value Capture Analysis**: Base layer is zero-tax; monetization flows through third-party facilitator staking, latency-optimized settlement relays, and enterprise SLA routing.
-  4. **Actionable Path for Individuals**: Integrate standard middleware into server endpoints to monetize API routes with agent micro-tollbooths.
+  1. **Developer & Code Ecosystem**: 2400 Stars | 340 Forks | 145 Commits (30d) — Standardized middleware packages available across Python (FastAPI), TypeScript (Express/Next.js), and Rust with strong multi-repo developer engagement.
+  2. **On-Chain & Network Dynamics**: 8500000 Txs (7d) | 125000 Active Addrs — Over 75M cumulative mainnet micro-transactions settled on Base L2 using EIP-3009/EIP-2612 transfer authorizations with sub-2-second finality.
+  3. **Value Capture Analysis**: Zero protocol-level tax at base standard layer; facilitator relayers monetize via priority sub-cent routing spreads, AML verification, and enterprise settlement tiers.
+  4. **Actionable Path for Individuals**: Integrate the middleware into live web services or run an autonomous facilitator relayer on Base.
 
 👉 **[Read Full Opportunity Card](reports/001-x402-payment-rails.md)**
 
@@ -43,13 +43,13 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 
 ### 2. [Base Agent SDK](reports/002-base-agent-sdk.md)
 - **Category**: AI Agent Infrastructure
-- **Score**: 93 / 100
-- **Core Value**: Opinionated abstraction framework enabling autonomous LLM workflows to control non-custodial smart wallets and execute on-chain transactions via natural language tool calls.
+- **Score**: 94 / 100
+- **Core Value**: Framework- and LLM-agnostic developer toolkit equipping AI agents with embedded, autonomous EVM wallets, gas-sponsorship policies, and smart contract execution.
 - **Key Evaluation Dimensions**:
-  1. **Developer & Code Ecosystem**: 3890 Stars | 910 Forks | 356 Commits (30d) — Heavily utilized across major AI orchestration engines including LangChain, CrewAI, AutoGen, and Claude MCP.
-  2. **On-Chain & Network Dynamics**: 840000 Txs (7d) | 210000 Active Addrs — Hundreds of thousands of automated smart contract calls leveraging EIP-4844 blobs for sub-cent executions.
-  3. **Value Capture Analysis**: Drives ecosystem value via Base sequencer fees, sponsored gas through Coinbase Paymasters, and native CDP cloud services.
-  4. **Actionable Path for Individuals**: Deploy Model Context Protocol servers to grant LLMs programmatic wallet controls within safe parameters.
+  1. **Developer & Code Ecosystem**: 4100 Stars | 1200 Forks | 210 Commits (30d) — Massive developer adoption through AgentKit with native integrations for LangChain, OpenAI Agents SDK, and Anthropic Claude tool calling.
+  2. **On-Chain & Network Dynamics**: 420000 Txs (7d) | 18000 Active Addrs — Hundreds of thousands of autonomous smart contract executions triggered across tens of thousands of deployed smart wallets on Base.
+  3. **Value Capture Analysis**: Drives continuous transaction fees to Base L2 sequencers while Coinbase Developer Platform monetizes premium relayer tiers and managed MPC key infrastructure.
+  4. **Actionable Path for Individuals**: Deploy autonomous agents using quickstart templates or develop custom action extensions.
 
 👉 **[Read Full Opportunity Card](reports/002-base-agent-sdk.md)**
 
@@ -58,12 +58,12 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 ### 3. [USDC Micro Router](reports/003-usdc-micro-router.md)
 - **Category**: DeFi / Liquidity Routing
 - **Score**: 89 / 100
-- **Core Value**: High-throughput batching and routing layer tailored for sub-cent USDC machine transactions using Permit2 gasless authorizations and transient storage.
+- **Core Value**: High-throughput intent router and liquidity aggregator batching and netting sub-cent USDC payments across heterogeneous AI agent interactions.
 - **Key Evaluation Dimensions**:
-  1. **Developer & Code Ecosystem**: 1340 Stars | 215 Forks | 148 Commits (30d) — Core smart contract repositories and a high-performance Rust transaction bundler maintained by specialized DeFi engineers.
-  2. **On-Chain & Network Dynamics**: 3100000 Txs (7d) | 14500 Active Addrs — Processes millions of micro-settlements across batched rollups, delivering over 90% gas reduction versus standard ERC-20 transfers.
-  3. **Value Capture Analysis**: Captures a 0.05% routing spread on batched settlements over $1.00 cumulative threshold alongside bundler MEV rebalancing.
-  4. **Actionable Path for Individuals**: Participate as an aggregation node solver to earn batching fees from agent transactions.
+  1. **Developer & Code Ecosystem**: 320 Stars | 45 Forks | 64 Commits (30d) — Core MCP server and routing SDK integrated into over 80 Model Context Protocol tool catalogs with active developer contributions.
+  2. **On-Chain & Network Dynamics**: 2200000 Txs (7d) | 34000 Active Addrs — Handles millions of micro-hops weekly while cutting agent gas overhead by 78% using EIP-3009 state-channel drawdown tabs.
+  3. **Value Capture Analysis**: Extracts fractional liquidity fees on aggregated netting settlement batches and cross-L2 liquidity bridging.
+  4. **Actionable Path for Individuals**: Connect the router directly to desktop AI environments and configure pre-funded agent tabs.
 
 👉 **[Read Full Opportunity Card](reports/003-usdc-micro-router.md)**
 
@@ -71,13 +71,13 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 
 ### 4. [Paywall Protocol](reports/004-paywall-protocol.md)
 - **Category**: Developer Tools / Content Monetization
-- **Score**: 86 / 100
-- **Core Value**: Turnkey headless paywall gateway converting web assets, REST/GraphQL endpoints, and dynamic content into metered HTTP 402 micro-tollbooths.
+- **Score**: 87 / 100
+- **Core Value**: Drop-in decentralized gating layer that transforms static Web2 API gateways, cloud functions, and SaaS assets into crypto-metered paywalls enforcing HTTP 402 checks.
 - **Key Evaluation Dimensions**:
-  1. **Developer & Code Ecosystem**: 2150 Stars | 330 Forks | 204 Commits (30d) — Strong collection of plugins covering edge runtimes like Cloudflare Workers, Next.js, and Express.
-  2. **On-Chain & Network Dynamics**: 1850000 Txs (7d) | 12400 Active Addrs — Over 12,000 active domains generating steady micro-receipt payment flows on Base and Polygon.
-  3. **Value Capture Analysis**: A 1% protocol fee on paywall receipts combined with enterprise SaaS licensing for zero-latency edge caching.
-  4. **Actionable Path for Individuals**: Protect content and API routes from automated crawlers while extracting programmatic revenue.
+  1. **Developer & Code Ecosystem**: 780 Stars | 110 Forks | 52 Commits (30d) — Open-source reverse-proxy middleware adapters for Nginx, Envoy, and Cloudflare Workers implemented in Go and TypeScript.
+  2. **On-Chain & Network Dynamics**: 1400000 Txs (7d) | 21000 Active Addrs — Secures hundreds of live registered domains with millions of paywall verifications completed at sub-180ms latency.
+  3. **Value Capture Analysis**: Levies a 1% fee on settled programmatic revenues or collects fixed relay fees from high-throughput enterprise proxies.
+  4. **Actionable Path for Individuals**: Deploy proxy containers to monetize existing web APIs without custom authentication code.
 
 👉 **[Read Full Opportunity Card](reports/004-paywall-protocol.md)**
 
@@ -85,13 +85,13 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 
 ### 5. [Agentic Data Market](reports/005-agentic-data-market.md)
 - **Category**: AI Data Marketplace
-- **Score**: 84 / 100
-- **Core Value**: Decentralized data exchange where automated scrapers and ingestion pipelines sell verified real-time datasets directly to AI models per query.
+- **Score**: 85 / 100
+- **Core Value**: Decentralized marketplace where autonomous agents buy and sell structured datasets, model context, options feeds, and verifiable RLHF task traces on a pay-per-query basis.
 - **Key Evaluation Dimensions**:
-  1. **Developer & Code Ecosystem**: 1820 Stars | 240 Forks | 176 Commits (30d) — Active provider adapter ecosystem featuring validated connectors for real-time web, news, and market feeds.
-  2. **On-Chain & Network Dynamics**: 640000 Txs (7d) | 420 Active Addrs — Hundreds of independent data providers serving machine context to autonomous inference pipelines.
-  3. **Value Capture Analysis**: Schema verification fees, seller staking bonds guaranteeing data freshness, and slashing for inaccurate payloads.
-  4. **Actionable Path for Individuals**: Run a data provider node indexing niche data feeds and earn per-query micro-payments.
+  1. **Developer & Code Ecosystem**: 620 Stars | 88 Forks | 41 Commits (30d) — Integrated with OpenBB Platform extensions and decentralized storage connectors with schema validation suites.
+  2. **On-Chain & Network Dynamics**: 780000 Txs (7d) | 9200 Active Addrs — Hundreds of active data providers streaming dynamic financial and context feeds with high micro-USDC weekly turnover.
+  3. **Value Capture Analysis**: Marketplace collects a 1.5% to 2% protocol fee upon atomic receipt delivery, backed by indexer staking to enforce uptime and integrity.
+  4. **Actionable Path for Individuals**: Monetize specialized datasets or integrate verified agent data streams into trading and context workflows.
 
 👉 **[Read Full Opportunity Card](reports/005-agentic-data-market.md)**
 
@@ -99,13 +99,13 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 
 ### 6. [Coinbase Wallet M2M](reports/006-coinbase-wallet-m2m.md)
 - **Category**: Wallet / M2M Settlement
-- **Score**: 82 / 100
-- **Core Value**: Cryptographic session key infrastructure allowing physical IoT devices and autonomous workers to act as self-governing economic agents with bounded spend controls.
+- **Score**: 84 / 100
+- **Core Value**: Machine-to-machine wallet abstraction infrastructure enabling non-custodial agent-to-agent transactions using passkeys and programmatic spending guardrails.
 - **Key Evaluation Dimensions**:
-  1. **Developer & Code Ecosystem**: 2780 Stars | 410 Forks | 252 Commits (30d) — Native extension of Coinbase Embedded Wallet and Passkey SDK with strong documentation and sample integrations.
-  2. **On-Chain & Network Dynamics**: 5600000 Txs (7d) | 94000 Active Addrs — Millions of automated signing events weekly with exceptionally low transaction failure rates.
-  3. **Value Capture Analysis**: Tiered enterprise API fees, gas sponsorship spreads, and compliance audit trail provisioning.
-  4. **Actionable Path for Individuals**: Equip background server workers with bounded ERC-4337 session keys for unattended operations.
+  1. **Developer & Code Ecosystem**: 3200 Stars | 580 Forks | 98 Commits (30d) — Maintained within core Coinbase Smart Wallet ecosystem repositories with complete documentation for automated signing and policy rules.
+  2. **On-Chain & Network Dynamics**: 560000 Txs (7d) | 14500 Active Addrs — Over 1.1M autonomous authorizations generated with near-perfect execution reliability via Base Paymaster bundler sponsorship.
+  3. **Value Capture Analysis**: Monetizes through facilitator clearing fees on sponsored execution bundles and off-ramp/on-ramp spread monetization.
+  4. **Actionable Path for Individuals**: Implement autonomous delegated spending and initialize agent wallets programmatically.
 
 👉 **[Read Full Opportunity Card](reports/006-coinbase-wallet-m2m.md)**
 
@@ -113,13 +113,13 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 
 ### 7. [Farcaster Frame 402](reports/007-farcaster-frame-402.md)
 - **Category**: SocialFi / Mini-Apps
-- **Score**: 80 / 100
-- **Core Value**: Integrates Farcaster v2 interactive Frames with HTTP 402 protocols, facilitating in-feed micro-tipping, dynamic content licensing, and autonomous bot interactions.
+- **Score**: 81 / 100
+- **Core Value**: Composable social-commerce protocol embedding interactive x402 paywalls inside Farcaster Frames for one-click unlocks, agent bounties, and micro-donations.
 - **Key Evaluation Dimensions**:
-  1. **Developer & Code Ecosystem**: 1940 Stars | 380 Forks | 288 Commits (30d) — Large library of community-maintained mini-app templates for Warpcast and Supercast clients.
-  2. **On-Chain & Network Dynamics**: 165000 Txs (7d) | 29000 Active Addrs — Hundreds of thousands of in-feed transactions from both human social users and autonomous agent accounts.
-  3. **Value Capture Analysis**: A 0.5% referral split on purchases initiated inside Frames shared with frame hosting relays and client apps.
-  4. **Actionable Path for Individuals**: Monetize research feeds and AI bot outputs directly in the Farcaster social stream.
+  1. **Developer & Code Ecosystem**: 490 Stars | 120 Forks | 38 Commits (30d) — Next.js starter kits and Warpcast-compatible interactive frame components supporting client-side micro-settlements.
+  2. **On-Chain & Network Dynamics**: 180000 Txs (7d) | 12000 Active Addrs — Over 32,000 interactive frames deployed resulting in substantial peer-to-peer social commerce volume.
+  3. **Value Capture Analysis**: Captures optional creator-split protocol hooks (0.5%–1.0%) on unlocks and distributes automated referral incentives for viral distribution.
+  4. **Actionable Path for Individuals**: Launch paid interactive frames on decentralized social networks using standard web frameworks.
 
 👉 **[Read Full Opportunity Card](reports/007-farcaster-frame-402.md)**
 
@@ -127,13 +127,13 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 
 ### 8. [Auto Compute Node](reports/008-auto-compute-node.md)
 - **Category**: DePIN / Distributed Compute
-- **Score**: 78 / 100
-- **Core Value**: Decentralized GPU/CPU bare-metal compute marketplace where autonomous workloads buy container runtimes and inference time via continuous 402-metered streaming.
+- **Score**: 80 / 100
+- **Core Value**: Decentralized compute and inference network where AI workers accept real-time, pay-per-token or pay-per-second x402 streaming micro-settlements.
 - **Key Evaluation Dimensions**:
-  1. **Developer & Code Ecosystem**: 2410 Stars | 315 Forks | 272 Commits (30d) — Active open-source daemon codebase with docker runner plugins for automated bare-metal leasing.
-  2. **On-Chain & Network Dynamics**: 142000 Txs (7d) | 1180 Active Addrs — More than 1,000 active GPU clusters delivering hundreds of thousands of node-hours with staked slashing pools.
-  3. **Value Capture Analysis**: A 2.5% protocol fee on streaming compute payments, plus validator slashing collateral for downtime or faulty inference.
-  4. **Actionable Path for Individuals**: Monetize spare machine hardware by provisioning it as an autonomous compute worker.
+  1. **Developer & Code Ecosystem**: 510 Stars | 72 Forks | 47 Commits (30d) — Lightweight node daemons with native integration bridges into Ollama, vLLM, and standardized Claude/OpenAI API wrappers.
+  2. **On-Chain & Network Dynamics**: 950000 Txs (7d) | 6400 Active Addrs — Over 2,100 active compute nodes worldwide settling millions of inference steps via programmatic USDC micropayments.
+  3. **Value Capture Analysis**: Charges a 1.5% node spread on compute matchmaking and enforces slashing conditions on workers failing execution proofs.
+  4. **Actionable Path for Individuals**: Monetize spare compute by deploying an inference daemon on local or cloud hardware.
 
 👉 **[Read Full Opportunity Card](reports/008-auto-compute-node.md)**
 
@@ -141,13 +141,13 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 
 ### 9. [Micro Stream Yield](reports/009-micro-stream-yield.md)
 - **Category**: DeFi / Yield Aggregator
-- **Score**: 76 / 100
-- **Core Value**: Automated continuous-liquidity treasury protocol routing idle stablecoin micro-balances accrued by autonomous agents into RWA and DeFi yields with sub-block liquidity access.
+- **Score**: 78 / 100
+- **Core Value**: Programmable treasury protocol that parks idle agent liquidity into yield-bearing DeFi vaults and streams real-time micro-yield to fund API and compute overhead.
 - **Key Evaluation Dimensions**:
-  1. **Developer & Code Ecosystem**: 1120 Stars | 160 Forks | 112 Commits (30d) — Formally verified smart contracts optimizing fast yield accrual and sub-second de-allocation.
-  2. **On-Chain & Network Dynamics**: 85000 Txs (7d) | 2400 Active Addrs — Tens of millions in TVL from machine treasury accounts achieving near 5% APY without locking capital.
-  3. **Value Capture Analysis**: A 10% performance fee levied on net interest earned across idle agent treasury holdings.
-  4. **Actionable Path for Individuals**: Optimize yield on working capital reserves held by automated on-chain bots and payment services.
+  1. **Developer & Code Ecosystem**: 380 Stars | 60 Forks | 29 Commits (30d) — Audited ERC-4626 wrapper integrations connecting Base money markets with continuous automated streaming keepers.
+  2. **On-Chain & Network Dynamics**: 120000 Txs (7d) | 4100 Active Addrs — $12.4M TVL deposited across agent treasury vaults, generating continuous net APY streamed directly into operational micro-settlement balances.
+  3. **Value Capture Analysis**: Collects a 10% performance fee on accrued yield while offering frictionless, zero-fee liquidity deposits and withdrawals.
+  4. **Actionable Path for Individuals**: Automate agent treasury management to self-fund computational and API expenses from passive yield.
 
 👉 **[Read Full Opportunity Card](reports/009-micro-stream-yield.md)**
 
@@ -155,13 +155,13 @@ Weekly automated scouting & evaluation system for identifying high-potential ear
 
 ### 10. [Chainlink 402 Oracle](reports/010-chainlink-402-oracle.md)
 - **Category**: Oracle / Data Feeds
-- **Score**: 75 / 100
-- **Core Value**: Decentralized oracle bridge verifying, validating, and attesting to off-chain HTTP 402 payment receipts across Base, Arbitrum, and Solana via CCIP.
+- **Score**: 77 / 100
+- **Core Value**: Oracle and automation layer integrating Chainlink Runtime Environment and DONs with x402 endpoints for trustless data verification and cross-chain execution.
 - **Key Evaluation Dimensions**:
-  1. **Developer & Code Ecosystem**: 1650 Stars | 210 Forks | 164 Commits (30d) — Official and community external adapters integrating HTTP 402 attestations into Chainlink Compute-Resource-Engine.
-  2. **On-Chain & Network Dynamics**: 890000 Txs (7d) | 1500 Active Addrs — Near 1-second state proof finality handling close to a million cross-chain attestation receipts weekly.
-  3. **Value Capture Analysis**: LINK token fee consumption per verified state attestation, with collateral slashing for dishonest oracle reporting.
-  4. **Actionable Path for Individuals**: Connect off-chain paid API results directly into on-chain execution logic with cryptographic proof.
+  1. **Developer & Code Ecosystem**: 1600 Stars | 280 Forks | 62 Commits (30d) — Extensive integration repos and Chainlink CRE workflow catalogs providing standardized JSON schema validation and CCIP connectors.
+  2. **On-Chain & Network Dynamics**: 95000 Txs (7d) | 3800 Active Addrs — Near 100,000 CRE workflow executions triggered via x402 calls with cross-chain message routing across 7 supported networks via CCIP.
+  3. **Value Capture Analysis**: Pay-per-call oracle query fees settled in USDC and LINK, split between DON consensus node operators and protocol staking pools.
+  4. **Actionable Path for Individuals**: Deploy verified data workflows and trigger decentralized automation through micropayment requests.
 
 👉 **[Read Full Opportunity Card](reports/010-chainlink-402-oracle.md)**
 
