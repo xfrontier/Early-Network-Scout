@@ -2,50 +2,49 @@
 
 - **Project ID**: `proj-coinbase-wallet-m2m`
 - **Category**: Wallet / M2M Settlement
-- **First Seen / Updated**: 2026-11-10 (2026-W46)
-- **Weekly Score**: **84 / 100** (Rank #6)
+- **First Seen / Updated**: 2026-11-17 (2026-W47)
+- **Weekly Score**: **86 / 100** (Rank #6)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Machine-to-machine wallet abstraction infrastructure enabling non-custodial agent-to-agent transactions using passkeys and programmatic spending guardrails.
+TEE-isolated, non-custodial smart wallet infrastructure providing autonomous machines with strict session allowances and automated compliance screening.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Maintained within core Coinbase Smart Wallet ecosystem repositories with complete documentation for automated signing and policy rules.
+- **Summary**: Open-source agent-wallet-skills library, awal CLI, and MCP plugins supported by Coinbase Developer Platform engineers.
 - **Hard Metrics**:
-  - GitHub Stars: `3200`
-  - GitHub Forks: `580`
-  - Commits (30d): `98`
-  - Active Contributors: `82`
+  - GitHub Stars: `2400`
+  - GitHub Forks: `380`
+  - Commits (30d): `115`
+  - Active Contributors: `36`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Over 1.1M autonomous authorizations generated with near-perfect execution reliability via Base Paymaster bundler sponsorship.
+- **Summary**: Over 85,000 machine-controlled smart accounts running on Base, Solana, and Polygon with >50M cumulative protected transactions.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `560000` txs
-  - 7d Active Addresses: `14500`
-  - 7d USD Volume: `$790000.0`
-  - Avg Gas Fee: `$0.0`
+  - 7d Transaction Volume: `1900000` txs
+  - 7d Active Addresses: `85000`
+  - 7d USD Volume: `$5800000.0`
+  - Avg Gas Fee: `$0.0003`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Monetizes through facilitator clearing fees on sponsored execution bundles and off-ramp/on-ramp spread monetization.
+CDP enterprise SLA compliance pipelines, transaction sponsorship margins, and fiat liquidity on-ramp fees.
 
 ### Key Value-Capturing Entities:
-1. Paymaster bundlers
 1. Coinbase Developer Platform
-1. Base ecosystem liquidity
+1. TEE enclave attestation providers
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Implement autonomous delegated spending and initialize agent wallets programmatically.
+Equip autonomous agent instances with sandboxed on-chain operational treasuries.
 
 ### Action Pathways:
-1. Configure session keys and delegated spending rules via the CDP Portal
-1. Initialize autonomous agents using the CdpSmartWalletProvider SDK
+1. Install and run the awal CLI locally via npx awal status
+1. Configure spending caps and session allowances for autonomous agent instances

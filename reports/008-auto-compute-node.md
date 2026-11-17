@@ -2,50 +2,50 @@
 
 - **Project ID**: `proj-auto-compute-node`
 - **Category**: DePIN / Distributed Compute
-- **First Seen / Updated**: 2026-11-10 (2026-W46)
-- **Weekly Score**: **80 / 100** (Rank #8)
+- **First Seen / Updated**: 2026-11-17 (2026-W47)
+- **Weekly Score**: **82 / 100** (Rank #8)
 - **Official Links**: [Official Site](#) | [GitHub Repo](#)
 
 ---
 
 ## 📌 Core Value Proposition
-Decentralized compute and inference network where AI workers accept real-time, pay-per-token or pay-per-second x402 streaming micro-settlements.
+P2P headless compute protocol allowing autonomous AI agents to discover, benchmark, and lease GPU/CPU inference per second via continuous streaming payments.
 
 ---
 
 ## 🛠️ 1. Developer & Code Ecosystem
-- **Summary**: Lightweight node daemons with native integration bridges into Ollama, vLLM, and standardized Claude/OpenAI API wrappers.
+- **Summary**: High-performance Rust node daemon and Python client SDK with integrated container runtime orchestrators for vLLM and Ollama.
 - **Hard Metrics**:
-  - GitHub Stars: `510`
-  - GitHub Forks: `72`
-  - Commits (30d): `47`
-  - Active Contributors: `16`
+  - GitHub Stars: `1320`
+  - GitHub Forks: `240`
+  - Commits (30d): `94`
+  - Active Contributors: `27`
 
 ---
 
 ## ⛓️ 2. On-Chain & Network Dynamics
-- **Summary**: Over 2,100 active compute nodes worldwide settling millions of inference steps via programmatic USDC micropayments.
+- **Summary**: 2,200+ active decentralized GPU nodes settling over 4.2M seconds of inference time each week.
 - **Hard Metrics**:
-  - 7d Transaction Volume: `950000` txs
-  - 7d Active Addresses: `6400`
-  - 7d USD Volume: `$310000.0`
-  - Avg Gas Fee: `$0.0002`
+  - 7d Transaction Volume: `310000` txs
+  - 7d Active Addresses: `7600`
+  - 7d USD Volume: `$520000.0`
+  - Avg Gas Fee: `$0.0004`
 
 ---
 
 ## 💰 3. Value Capture Analysis
-Charges a 1.5% node spread on compute matchmaking and enforces slashing conditions on workers failing execution proofs.
+Enforces node collateral staking for SLA enforcement paired with a 2% token burn on compute settlement vouchers.
 
 ### Key Value-Capturing Entities:
-1. Independent GPU/CPU node operators
-1. Proof verification relayers
-1. Compute coordination layer
+1. GPU node providers
+1. Staking collateral pools
+1. Compute burn reserve
 
 ---
 
 ## 🎯 4. Actionable Path for Individuals
-Monetize spare compute by deploying an inference daemon on local or cloud hardware.
+Monetize spare consumer or datacenter compute against machine inference requests.
 
 ### Action Pathways:
-1. Spin up a lightweight node daemon with an attached GPU/CPU worker
-1. Serve LLM inference requests to earn immediate programmatic USDC settlement
+1. Run the auto-compute daemon on an idle RTX 4090 or cloud cluster
+1. Serve x402-gated LLM inference calls to AI agent networks
